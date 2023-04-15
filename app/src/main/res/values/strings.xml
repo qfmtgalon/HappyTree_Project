@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Happy Tree</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="txtLogin">Login</string>
+    <string name="txtRegister">Register</string>
+    <string name="txtGetStarted">Get Started</string>
+    <string name="txtExistingAccount">I already have an account</string>
+    <string name="title_activity_landing_page">LandingPage</string>
+    <string name="required">Required</string>
+    <string name="email">Email Address</string>
+    <string name="password">Password</string>
+    <string name="username">Username</string>
+    <string name="confirmPassword">Confirm Password</string>
+    <string name="userIcon" />
+    <string name="emailIcon" />
+    <string name="passwordKey" />
+    <string name="confirmPasswordIcon" />
+
+
+</resources>
