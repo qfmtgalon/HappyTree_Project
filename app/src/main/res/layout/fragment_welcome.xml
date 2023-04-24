@@ -41,7 +41,7 @@
         app:layout_constraintTop_toBottomOf="@+id/btnGetStarted" />
 
     <Button
-        android:id="@+id/button6"
+        android:id="@+id/btnLoginText"
         style="@style/textButton"
         android:layout_width="55dp"
         android:layout_height="45dp"

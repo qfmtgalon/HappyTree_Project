@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <item name="bottomFarm" type="id" />
-    <item name="navigation" type="id" />\
+    <item name="navigation" type="id" />
+    <item name="drawerLayout" type="id" />
+    <item name="navView" type="id" />
+    <item name="navBottom" type="id" />\
 </resources>
