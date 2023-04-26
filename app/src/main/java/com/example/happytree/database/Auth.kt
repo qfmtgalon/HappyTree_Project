@@ -8,10 +8,12 @@ import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
-@Entity
+@Entity(tableName = "auth_table")
 data class Auth(
-    @PrimaryKey(autoGenerate = false)
+    @PrimaryKey
+    @ColumnInfo(name = "username")
     val username: String,
-    @NonNull @ColumnInfo
+    @ColumnInfo(name = "password")
     val password: String
 )
+

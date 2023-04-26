@@ -1,20 +1,26 @@
 package com.example.happytree.database
 
+import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.asLiveData
 import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.launch
 
-class AuthViewModel(private val authDao: AuthDao): ViewModel(){
-    val findUser = authDao.findUser().asLiveData()
 
+class AuthViewModel(private val authDao: AuthDao) : ViewModel() {
 
-    fun addUser(auth: Auth) = viewModelScope.launch {
-        authDao.addUser(auth)
+    fun getAuth(username: String): LiveData<Auth> {
+        return authDao.getAuth(username)
     }
 
-    fun findUser (username: String) :
-            Flow<List<Auth>> = authDao.findUser(username)
+    suspend fun insertAuth(auth: Auth) {
+        authDao.insertAuth(auth)
+    }
+
+    suspend fun countUsers(username: String): Int {
+        return authDao.countUsers(username)
+    }
 }
+
 
