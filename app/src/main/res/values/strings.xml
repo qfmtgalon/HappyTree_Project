@@ -16,6 +16,8 @@
     <string name="emailIcon" />
     <string name="passwordKey" />
     <string name="confirmPasswordIcon" />
+    <string name="textview">TextView</string>
+    <string name="dateTextView">TextView</string>
 
 
 </resources>

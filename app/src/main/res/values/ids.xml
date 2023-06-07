@@ -4,5 +4,7 @@
     <item name="navigation" type="id" />
     <item name="drawerLayout" type="id" />
     <item name="navView" type="id" />
-    <item name="navBottom" type="id" />\
+    <item name="navBottom" type="id" />
+    <item name="bottomWeather" type="id" />
+    <item name="imagewelcome" type="id" />\
 </resources>
