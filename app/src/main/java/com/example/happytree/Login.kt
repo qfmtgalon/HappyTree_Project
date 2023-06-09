@@ -32,6 +32,9 @@ class Login : Fragment() {
         binding.btnSignUpText.setOnClickListener { view: View ->
             view.findNavController().navigate(R.id.action_login_to_registration)
         }
+        binding.returnBtn.setOnClickListener { view: View ->
+            view.findNavController().navigate(R.id.action_login_to_registration)
+        }
 
         viewModel = ViewModelProvider(
             this,
