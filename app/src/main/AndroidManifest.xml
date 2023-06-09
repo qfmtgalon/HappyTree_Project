@@ -17,7 +17,7 @@
             android:name=".MainActivity"
             android:exported="false"
             android:label="LandingPage"
-            android:theme="@style/Theme.AppCompat.DayNight">
+            android:theme="@style/Theme.HappyTree.NoActionBar">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />

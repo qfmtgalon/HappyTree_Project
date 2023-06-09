@@ -9,16 +9,16 @@
     <fragment
         android:id="@+id/home"
         android:name="com.example.happytree.Home"
-        android:label="fragment_home"
+        android:label="Happy Tree"
         tools:layout="@layout/fragment_home" />
     <fragment
         android:id="@+id/diseases"
         android:name="com.example.happytree.Diseases"
-        android:label="fragment_diseases"
+        android:label="Mango Tree Diseases"
         tools:layout="@layout/fragment_diseases" />
     <fragment
         android:id="@+id/farm"
         android:name="com.example.happytree.Farm"
-        android:label="fragment_farm"
+        android:label="My Farm"
         tools:layout="@layout/fragment_farm" />
 </navigation>
