@@ -1,4 +1,4 @@
-package com.example.happytree.database
+package com.example.happytree.database.FarmDatabase
 
 import androidx.lifecycle.LiveData
 

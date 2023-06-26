@@ -17,11 +17,6 @@
         android:label="Mango Tree Diseases"
         tools:layout="@layout/fragment_diseases" />
     <fragment
-        android:id="@+id/farm"
-        android:name="com.example.happytree.Farm"
-        android:label="My Farm"
-        tools:layout="@layout/fragment_farm" />
-    <fragment
         android:id="@+id/inputFragment"
         android:name="com.example.happytree.InputFragment"
         android:label="Add"
@@ -41,6 +36,11 @@
         android:name="com.example.happytree.UpdateFragment"
         android:label="Update"
         tools:layout="@layout/fragment_update" >
+
+        <argument
+            android:name="farmdetails"
+            app:argType="com.example.happytree.database.FarmDatabase.Farm"/>
+
         <action
             android:id="@+id/action_updateFragment_to_inputFragment"
             app:destination="@id/inputFragment" />

@@ -1,4 +1,4 @@
-package com.example.happytree.database
+package com.example.happytree.database.FarmDatabase
 
 import android.os.Parcelable
 import androidx.room.ColumnInfo
@@ -15,7 +15,7 @@ data class Farm(
     @ColumnInfo(name = "disease")
     val disease: String,
     @ColumnInfo(name = "numberOfTrees")
-    val numberOfTrees: Int,
+    val numberOfTrees: String,
     @ColumnInfo(name = "dateTime")
     val dateTime: String
 ) : Parcelable

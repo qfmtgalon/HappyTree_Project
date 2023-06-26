@@ -6,7 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import com.example.happytree.database.FarmViewModel
+import com.example.happytree.database.FarmDatabase.FarmViewModel
 import com.example.happytree.databinding.FragmentInputBinding
 
 
@@ -26,7 +26,7 @@ class InputFragment : Fragment() {
             val disease = binding.InputDisease.text.toString()
             val numTree = binding.numTree.text.toString()
             val dateTime = binding.dateTime.text.toString()
-            val item = Farm(0, disease, numTree, dateTime)
+            val item = com.example.happytree.database.FarmDatabase.Farm(0, disease, numTree, dateTime)
             farmViewModel.insertItem(item)
         }
 

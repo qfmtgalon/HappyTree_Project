@@ -7,9 +7,11 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
-import com.example.happytree.database.FarmAdapter
-import com.example.happytree.database.FarmViewModel
+import com.example.happytree.database.FarmDatabase.Farm
+import com.example.happytree.database.FarmDatabase.FarmAdapter
+import com.example.happytree.database.FarmDatabase.FarmViewModel
 import com.example.happytree.databinding.FragmentViewBinding
 
 class ViewFragment : Fragment() {
@@ -32,6 +34,13 @@ class ViewFragment : Fragment() {
         recyclerView.adapter = farmAdapter
         recyclerView.layoutManager = GridLayoutManager(context, 1)
 
+        farmAdapter.setOnItemClickListener(object : FarmAdapter.OnItemClickListener {
+            override fun onItemClick(farm: Farm) {
+                val action = ViewFragmentDirections.actionViewFragmentToUpdateFragment(farm)
+                findNavController().navigate(action)
+            }
+        })
+
         farmViewModel = ViewModelProvider(this)[FarmViewModel::class.java]
         farmViewModel.readItem()?.observe(viewLifecycleOwner, Observer {
             farmAdapter.setData(it)
@@ -39,6 +48,7 @@ class ViewFragment : Fragment() {
 
         return binding.root
     }
+
 
 
 }
