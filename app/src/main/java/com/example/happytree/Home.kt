@@ -6,6 +6,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
+import androidx.navigation.Navigation
+import com.google.android.material.card.MaterialCardView
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -31,15 +33,15 @@ class Home : Fragment() {
         val formattedDate = dateFormat.format(date)
         currentDate.text = formattedDate
 
-//        val btnAdd = view.findViewById<MaterialCardView>(R.id.btnAdd)
-//        btnAdd.setOnClickListener {
-//            val navController = Navigation.findNavController(view)
-//            navController.navigate(R.id.inputFragment)
-//        }
-//
-//        val btnViewFarm = view.findViewById<MaterialCardView>(R.id.btnViewFarm)
-//        btnViewFarm.setOnClickListener{
-//            val navController = Navigation.findNavController(view)
-//            navController.navigate(R.id.viewFragment)
-//        }
+        val btnAdd = view.findViewById<MaterialCardView>(R.id.btnAdd)
+        btnAdd.setOnClickListener {
+            val navController = Navigation.findNavController(view)
+            navController.navigate(R.id.inputFragment)
+        }
+
+        val btnViewFarm = view.findViewById<MaterialCardView>(R.id.btnViewFarm)
+        btnViewFarm.setOnClickListener{
+            val navController = Navigation.findNavController(view)
+            navController.navigate(R.id.viewFragment)
+        }
     }}

@@ -18,6 +18,9 @@
     <string name="confirmPasswordIcon" />
     <string name="textview">TextView</string>
     <string name="dateTextView">TextView</string>
+    <string name="disease">Disease</string>
+    <string name="dateTime">Date and Time</string>
+    <string name="numTree">No. of Trees</string>
 
 
 </resources>

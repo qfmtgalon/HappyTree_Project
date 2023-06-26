@@ -21,4 +21,58 @@
         android:name="com.example.happytree.Farm"
         android:label="My Farm"
         tools:layout="@layout/fragment_farm" />
+    <fragment
+        android:id="@+id/inputFragment"
+        android:name="com.example.happytree.InputFragment"
+        android:label="Add"
+        tools:layout="@layout/fragment_input" >
+        <action
+            android:id="@+id/action_inputFragment_to_updateFragment"
+            app:destination="@id/updateFragment" />
+        <action
+            android:id="@+id/action_inputFragment_to_viewFragment"
+            app:destination="@id/viewFragment" />
+        <action
+            android:id="@+id/action_inputFragment_to_updateFragment2"
+            app:destination="@id/updateFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/updateFragment"
+        android:name="com.example.happytree.UpdateFragment"
+        android:label="Update"
+        tools:layout="@layout/fragment_update" >
+        <action
+            android:id="@+id/action_updateFragment_to_inputFragment"
+            app:destination="@id/inputFragment" />
+        <action
+            android:id="@+id/action_updateFragment_to_viewFragment"
+            app:destination="@id/viewFragment" />
+        <action
+            android:id="@+id/action_updateFragment_to_inputFragment2"
+            app:destination="@id/inputFragment" />
+        <action
+            android:id="@+id/action_updateFragment_to_inputFragment3"
+            app:destination="@id/inputFragment" />
+        <action
+            android:id="@+id/action_updateFragment_to_viewFragment2"
+            app:destination="@id/viewFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/viewFragment"
+        android:name="com.example.happytree.ViewFragment"
+        android:label="View"
+        tools:layout="@layout/fragment_view" >
+        <action
+            android:id="@+id/action_viewFragment_to_inputFragment"
+            app:destination="@id/inputFragment" />
+        <action
+            android:id="@+id/action_viewFragment_to_updateFragment"
+            app:destination="@id/updateFragment" />
+        <action
+            android:id="@+id/action_viewFragment_to_updateFragment2"
+            app:destination="@id/updateFragment" />
+        <action
+            android:id="@+id/action_viewFragment_to_inputFragment2"
+            app:destination="@id/inputFragment" />
+    </fragment>
 </navigation>

@@ -5,18 +5,39 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.GridLayoutManager
+import com.example.happytree.database.FarmAdapter
 import com.example.happytree.database.FarmViewModel
+import com.example.happytree.databinding.FragmentViewBinding
 
 class ViewFragment : Fragment() {
 
     private lateinit var farmViewModel: FarmViewModel
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_view, container, false)
+
+        val view = inflater.inflate(R.layout.fragment_view, container, false)
+
+        val binding = FragmentViewBinding.bind(view)
+        val recyclerView = binding.recycleone
+        val farmAdapter = FarmAdapter()
+
+        recyclerView.adapter = farmAdapter
+        recyclerView.layoutManager = GridLayoutManager(context, 1)
+
+        farmViewModel = ViewModelProvider(this)[FarmViewModel::class.java]
+        farmViewModel.readItem()?.observe(viewLifecycleOwner, Observer {
+            farmAdapter.setData(it)
+        })
+
+        return binding.root
     }
 
 
