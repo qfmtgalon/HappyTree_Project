@@ -6,56 +6,40 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ViewFragment">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recycleone"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="20dp"
-        app:layout_constraintBottom_toTopOf="@+id/pageContainer"
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:layout_marginBottom="1dp"
+        android:text="List of Diseases on your farm"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/recycleone"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- Add a LinearLayout to hold the page numbers -->
-    <LinearLayout
-        android:id="@+id/pageContainer"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycleone"
+        android:layout_width="391dp"
+        android:layout_height="353dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnDeleteAll"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <!-- Add the delete all button -->
+    <Button
+        android:id="@+id/btnDeleteAll"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:orientation="horizontal"
+        android:text="Delete All"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/recycleone">
-
-        <!-- Add TextViews to represent the page numbers -->
-        <TextView
-            android:id="@+id/page1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="4dp"
-            android:background="@drawable/page_number_background"
-            android:padding="8dp"
-            android:text="1"
-            android:textColor="#000000"
-            android:textSize="16sp" />
-
-        <TextView
-            android:id="@+id/page2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="4dp"
-            android:background="@drawable/page_number_background"
-            android:padding="8dp"
-            android:text="2"
-            android:textColor="#000000"
-            android:textSize="16sp" />
-
-        <!-- Add more TextViews for additional page numbers as needed -->
-
-    </LinearLayout>
+        app:layout_constraintTop_toBottomOf="@id/recycleone" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

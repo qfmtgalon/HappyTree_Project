@@ -44,4 +44,12 @@ class FarmViewModel(application: Application) : AndroidViewModel(application) {
             repository.deleteItem(farm)
         }
     }
+
+    // Function to delete all farm items using a coroutine on the IO dispatcher
+    fun deleteAllItems() {
+        viewModelScope.launch(Dispatchers.IO) {
+            // Delete all farm items using the repository
+            repository.deleteAllItems()
+        }
+    }
 }

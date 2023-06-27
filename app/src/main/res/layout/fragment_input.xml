@@ -38,10 +38,8 @@
             android:lines="1" />
     </com.google.android.material.textfield.TextInputLayout>
 
-
-
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/dateTimeContainer"
+        android:id="@+id/numTreeContainer"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
@@ -53,16 +51,16 @@
         app:layout_constraintTop_toBottomOf="@+id/diseaseContainer">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/dateTime"
+            android:id="@+id/numTree"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:hint="@string/dateTime"
-            android:inputType="datetime"
+            android:hint="@string/numTree"
+            android:inputType="numberDecimal"
             android:lines="1" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/numTreeContainer"
+        android:id="@+id/dateTimeContainer"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
@@ -71,14 +69,14 @@
         app:endIconMode="clear_text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/dateTimeContainer">
+        app:layout_constraintTop_toBottomOf="@+id/numTreeContainer">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/numTree"
+            android:id="@+id/dateTime"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:hint="@string/numTree"
-            android:inputType="numberDecimal"
+            android:hint="@string/dateTime"
+            android:inputType="datetime"
             android:lines="1" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -90,7 +88,6 @@
         android:text="Button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/numTreeContainer" />
-
+        app:layout_constraintTop_toBottomOf="@+id/dateTimeContainer" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

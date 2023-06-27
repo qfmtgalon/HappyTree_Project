@@ -16,4 +16,7 @@ interface FarmDao {
 
     @Delete
     suspend fun deleteFarm(farm: Farm)
+
+    @Query("DELETE FROM farmTable")
+    suspend fun deleteAll()
 }
