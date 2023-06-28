@@ -25,6 +25,7 @@ class UpdateFragment : Fragment(), DatePickerDialog.OnDateSetListener, TimePicke
     private lateinit var farmViewModel: FarmViewModel
     private var selectedDate: LocalDate? = null
     private lateinit var binding: FragmentUpdateBinding
+    private lateinit var currentItem: Farm
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -39,33 +40,38 @@ class UpdateFragment : Fragment(), DatePickerDialog.OnDateSetListener, TimePicke
         }
         updateTimeField()
 
+        // Retrieve the item details from the arguments
+        currentItem = args.farmdetails
+
+        // Set the item details to the views
+        binding.upDisease.setText(currentItem.disease)
+        binding.upNumtree.setText(currentItem.numberOfTrees)
+        binding.upVariant.setText(currentItem.variant)
+        binding.Update.setText(currentItem.dateTime)
+
         binding.btnUp.setOnClickListener {
-            val item = Farm(
-                args.farmdetails.id,
+            // Update the item with the new values
+            val updatedItem = Farm(
+                currentItem.id,
                 binding.upDisease.text.toString(),
                 binding.upNumtree.text.toString(),
                 binding.Update.text.toString(),
                 binding.upVariant.text.toString()
             )
-            farmViewModel.updateItem(item)
+            farmViewModel.updateItem(updatedItem)
             findNavController().navigate(R.id.viewFragment)
         }
 
         binding.btnDel.setOnClickListener {
-            val builder = AlertDialog.Builder(context)
+            // Show the delete confirmation dialog
+            val builder = AlertDialog.Builder(requireContext())
             builder.setPositiveButton("Yes") { _, _ ->
-                val item = Farm(
-                    args.farmdetails.id,
-                    binding.upDisease.text.toString(),
-                    binding.upNumtree.text.toString(),
-                    binding.Update.text.toString(),
-                    binding.upVariant.text.toString()
-                )
-                farmViewModel.deleteItem(item)
+                // Delete the item
+                farmViewModel.deleteItem(currentItem)
                 findNavController().navigate(R.id.viewFragment)
             }
             builder.setNegativeButton("No", null)
-            builder.setTitle("Delete ${args.farmdetails.disease}?")
+            builder.setTitle("Delete ${currentItem.disease}?")
             builder.setMessage("Do you want to delete this item?")
             builder.create().show()
         }

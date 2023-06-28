@@ -43,6 +43,10 @@ class ViewFragment : Fragment() {
             farmAdapter.setData(it)
         })
 
+        binding.btnAddItem.setOnClickListener {
+            findNavController().navigate(R.id.action_viewFragment_to_inputFragment)
+        }
+
         binding.btnDeleteAll.setOnClickListener {
             deleteAllItems()
         }
