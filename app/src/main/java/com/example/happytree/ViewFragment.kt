@@ -1,6 +1,5 @@
 package com.example.happytree
 
-import FarmAdapter
 import android.app.AlertDialog
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -13,6 +12,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import com.example.happytree.database.FarmDatabase.Farm
+import com.example.happytree.database.FarmDatabase.FarmAdapter
 import com.example.happytree.database.FarmDatabase.FarmViewModel
 import com.example.happytree.databinding.FragmentViewBinding
 

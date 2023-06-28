@@ -1,6 +1,5 @@
 package com.example.happytree
 
-
 import android.app.AlertDialog
 import android.app.DatePickerDialog
 import android.app.TimePickerDialog
@@ -19,15 +18,13 @@ import com.example.happytree.database.FarmDatabase.FarmViewModel
 import com.example.happytree.databinding.FragmentUpdateBinding
 import java.time.LocalDate
 import java.time.LocalDateTime
-import java.time.LocalTime
 import java.time.format.DateTimeFormatter
 
 class UpdateFragment : Fragment(), DatePickerDialog.OnDateSetListener, TimePickerDialog.OnTimeSetListener {
     private val args: UpdateFragmentArgs by navArgs()
     private lateinit var farmViewModel: FarmViewModel
     private var selectedDate: LocalDate? = null
-    private var selectedTime: LocalTime? = null
-    private lateinit var binding: FragmentUpdateBinding // Declare binding as a class-level property
+    private lateinit var binding: FragmentUpdateBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -36,21 +33,19 @@ class UpdateFragment : Fragment(), DatePickerDialog.OnDateSetListener, TimePicke
         binding = FragmentUpdateBinding.inflate(inflater, container, false)
         farmViewModel = ViewModelProvider(this)[FarmViewModel::class.java]
 
-        binding.Update.setText(args.farmdetails.dateTime)
-        binding.upDisease.setText(args.farmdetails.disease)
-        binding.upNumtree.setText(args.farmdetails.numberOfTrees)
-
-        binding.Update.keyListener = null // Make the field non-editable
+        binding.Update.keyListener = null
         binding.Update.setOnClickListener {
             showDatePickerDialog()
         }
+        updateTimeField()
 
         binding.btnUp.setOnClickListener {
             val item = Farm(
                 args.farmdetails.id,
                 binding.upDisease.text.toString(),
                 binding.upNumtree.text.toString(),
-                binding.Update.text.toString()
+                binding.Update.text.toString(),
+                binding.upVariant.text.toString()
             )
             farmViewModel.updateItem(item)
             findNavController().navigate(R.id.viewFragment)
@@ -63,7 +58,8 @@ class UpdateFragment : Fragment(), DatePickerDialog.OnDateSetListener, TimePicke
                     args.farmdetails.id,
                     binding.upDisease.text.toString(),
                     binding.upNumtree.text.toString(),
-                    binding.Update.text.toString()
+                    binding.Update.text.toString(),
+                    binding.upVariant.text.toString()
                 )
                 farmViewModel.deleteItem(item)
                 findNavController().navigate(R.id.viewFragment)
@@ -99,7 +95,7 @@ class UpdateFragment : Fragment(), DatePickerDialog.OnDateSetListener, TimePicke
     }
 
     private fun showTimePickerDialog() {
-        val currentTime = selectedTime ?: LocalTime.now()
+        val currentTime = LocalDateTime.now()
         val hour = currentTime.hour
         val minute = currentTime.minute
 
@@ -114,10 +110,16 @@ class UpdateFragment : Fragment(), DatePickerDialog.OnDateSetListener, TimePicke
     }
 
     override fun onTimeSet(view: TimePicker?, hourOfDay: Int, minute: Int) {
-        selectedTime = LocalTime.of(hourOfDay, minute)
+        updateTimeField()
+    }
 
-        val dateTime = LocalDateTime.of(selectedDate, selectedTime)
-        val formattedDateTime = dateTime.format(DateTimeFormatter.ISO_LOCAL_DATE_TIME)
+    private fun updateTimeField() {
+        val date = selectedDate ?: LocalDate.now()
+        val time = LocalDateTime.now().toLocalTime()
+        val dateTime = LocalDateTime.of(date, time)
+
+        val formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm")
+        val formattedDateTime = dateTime.format(formatter)
 
         binding.Update.setText(formattedDateTime)
     }

@@ -21,6 +21,7 @@
     <string name="disease">Disease</string>
     <string name="dateTime">Date and Time</string>
     <string name="numTree">No. of Trees</string>
+    <string name="txtDescrip">No. of trees affected: </string>
 
 
 </resources>

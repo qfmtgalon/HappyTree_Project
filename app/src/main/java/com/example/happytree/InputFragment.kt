@@ -11,17 +11,16 @@ import android.widget.TimePicker
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
+import com.example.happytree.database.FarmDatabase.Farm
 import com.example.happytree.database.FarmDatabase.FarmViewModel
 import com.example.happytree.databinding.FragmentInputBinding
 import java.time.LocalDate
 import java.time.LocalDateTime
-import java.time.LocalTime
 import java.time.format.DateTimeFormatter
 
 class InputFragment : Fragment(), DatePickerDialog.OnDateSetListener, TimePickerDialog.OnTimeSetListener {
     private lateinit var farmViewModel: FarmViewModel
     private var selectedDate: LocalDate? = null
-    private var selectedTime: LocalTime? = null
     private lateinit var binding: FragmentInputBinding
 
     override fun onCreateView(
@@ -33,9 +32,10 @@ class InputFragment : Fragment(), DatePickerDialog.OnDateSetListener, TimePicker
 
         binding.BtnInputReg.setOnClickListener{
             val disease = binding.InputDisease.text.toString()
+            val variant = binding.Variant.text.toString()
             val numTree = binding.numTree.text.toString()
             val dateTime = binding.dateTime.text.toString()
-            val item = com.example.happytree.database.FarmDatabase.Farm(0, disease, numTree, dateTime)
+            val item = Farm(0, disease, numTree, dateTime, variant)
             farmViewModel.insertItem(item)
 
             val navController = findNavController()
@@ -46,6 +46,7 @@ class InputFragment : Fragment(), DatePickerDialog.OnDateSetListener, TimePicker
         binding.dateTime.setOnClickListener {
             showDatePickerDialog()
         }
+        updateTimeField()
 
         return binding.root
     }
@@ -72,7 +73,7 @@ class InputFragment : Fragment(), DatePickerDialog.OnDateSetListener, TimePicker
     }
 
     private fun showTimePickerDialog() {
-        val currentTime = selectedTime ?: LocalTime.now()
+        val currentTime = LocalDateTime.now()
         val hour = currentTime.hour
         val minute = currentTime.minute
 
@@ -87,10 +88,16 @@ class InputFragment : Fragment(), DatePickerDialog.OnDateSetListener, TimePicker
     }
 
     override fun onTimeSet(view: TimePicker?, hourOfDay: Int, minute: Int) {
-        selectedTime = LocalTime.of(hourOfDay, minute)
+        updateTimeField()
+    }
 
-        val dateTime = LocalDateTime.of(selectedDate, selectedTime)
-        val formattedDateTime = dateTime.format(DateTimeFormatter.ISO_LOCAL_DATE_TIME)
+    private fun updateTimeField() {
+        val date = selectedDate ?: LocalDate.now()
+        val time = LocalDateTime.now().toLocalTime()
+        val dateTime = LocalDateTime.of(date, time)
+
+        val formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm")
+        val formattedDateTime = dateTime.format(formatter)
 
         binding.dateTime.setText(formattedDateTime)
     }

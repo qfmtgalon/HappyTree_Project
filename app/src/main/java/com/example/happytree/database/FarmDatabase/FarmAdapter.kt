@@ -1,3 +1,5 @@
+package com.example.happytree.database.FarmDatabase
+
 import android.graphics.Outline
 import android.os.Build
 import android.view.LayoutInflater
@@ -9,7 +11,6 @@ import androidx.annotation.RequiresApi
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.happytree.R
-import com.example.happytree.database.FarmDatabase.Farm
 
 class FarmAdapter : RecyclerView.Adapter<FarmAdapter.MyViewHolder>() {
 
@@ -28,6 +29,7 @@ class FarmAdapter : RecyclerView.Adapter<FarmAdapter.MyViewHolder>() {
         val cardView: CardView = itemView.findViewById(R.id.cv)
         val diseaseTextView: TextView = itemView.findViewById(R.id.txtDisease)
         val dateTextView: TextView = itemView.findViewById(R.id.txtDate)
+        val variantTextView: TextView = itemView.findViewById(R.id.txtVariant)
         val numTreeTextView: TextView = itemView.findViewById(R.id.txtNumTree)
 
         init {
@@ -61,7 +63,8 @@ class FarmAdapter : RecyclerView.Adapter<FarmAdapter.MyViewHolder>() {
 
         holder.diseaseTextView.text = currentItem.disease
         holder.dateTextView.text = currentItem.dateTime
-        holder.numTreeTextView.text = currentItem.numberOfTrees.toString()
+        holder.variantTextView.text = currentItem.variant
+        holder.numTreeTextView.text = "No. of trees affected: ${currentItem.numberOfTrees}"
         holder.cardView.setOnClickListener {
             onItemClickListener?.onItemClick(currentItem)
         }

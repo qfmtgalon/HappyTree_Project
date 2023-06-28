@@ -17,5 +17,7 @@ data class Farm(
     @ColumnInfo(name = "numberOfTrees")
     val numberOfTrees: String,
     @ColumnInfo(name = "dateTime")
-    val dateTime: String
+    val dateTime: String,
+    @ColumnInfo(name= "variant")
+    val variant: String
 ) : Parcelable
