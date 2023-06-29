@@ -11,6 +11,7 @@ import android.widget.DatePicker
 import android.widget.TimePicker
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
 import com.example.happytree.database.FarmDatabase.Farm
 import com.example.happytree.database.FarmDatabase.FarmViewModel
@@ -48,6 +49,10 @@ class InputFragment : Fragment(), DatePickerDialog.OnDateSetListener, TimePicker
             showDatePickerDialog()
         }
         updateTimeField()
+
+        binding.BtnCancel.setOnClickListener{
+            view?.findNavController()?.navigate(R.id.action_inputFragment_to_viewFragment)
+        }
 
         return binding.root
     }

@@ -10,9 +10,10 @@
 
     <Button
         android:id="@+id/btnGetStarted"
-        android:layout_width="wrap_content"
+        style="@style/button"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="500dp"
+        android:layout_marginTop="550dp"
         android:text="Get Started"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -44,7 +45,7 @@
         android:id="@+id/btnLoginText"
         style="@style/textButton"
         android:layout_width="55dp"
-        android:layout_height="45dp"
+        android:layout_height="48dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="24dp"
         android:paddingHorizontal="0dp"

@@ -7,9 +7,10 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cv"
-        android:layout_width="385dp"
+        android:layout_width="350dp"
         android:layout_height="120dp"
         android:layout_marginTop="16dp"
+        app:cardBackgroundColor="@color/colorSecondaryVariant"
         app:cardCornerRadius="25dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -18,8 +19,7 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/colorPrimaryVariant">
+            android:layout_height="match_parent">
 
             <TextView
                 android:id="@+id/txtDisease"
@@ -30,7 +30,7 @@
                 android:capitalize="characters"
                 android:minHeight="48dp"
                 android:text="Disease"
-                android:textColor="#000000"
+                android:textColor="@color/colorOnError"
                 android:textSize="20dp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
@@ -44,7 +44,7 @@
                 android:layout_marginTop="3dp"
                 android:layout_marginEnd="290dp"
                 android:text="Variant"
-                android:textColor="#000000"
+                android:textColor="@color/colorOnError"
                 android:textSize="16dp"
                 android:textStyle="italic"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -71,7 +71,7 @@
                 android:layout_marginEnd="24dp"
                 android:layout_marginBottom="72dp"
                 android:text="Date and Time"
-                android:textColor="#676363"
+                android:textColor="@color/colorOnError"
                 android:textSize="12sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent" />

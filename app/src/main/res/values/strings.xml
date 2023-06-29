@@ -22,6 +22,9 @@
     <string name="dateTime">Date and Time</string>
     <string name="numTree">No. of Trees</string>
     <string name="txtDescrip">No. of trees affected: </string>
+    <string name="change_username" />
+    <string name="delete_account" />
+    <string name="logout" />
 
 
 </resources>

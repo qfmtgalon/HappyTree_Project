@@ -23,11 +23,11 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/upDiseaseContainer"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="20dp"
-        android:layout_marginTop="92dp"
+        android:layout_marginTop="60dp"
         app:endIconMode="clear_text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.504"
@@ -46,11 +46,11 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/upNumtreeContainer"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="20dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="28dp"
         app:endIconMode="clear_text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.504"
@@ -69,27 +69,27 @@
 
     <Button
         android:id="@+id/btnUp"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="37dp"
-        android:layout_marginTop="50dp"
+        style="@style/button2"
+        android:layout_marginStart="39dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="40dp"
         android:text="UPDATE"
+        app:layout_constraintEnd_toStartOf="@+id/btnDel"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/UpdateContainer" />
 
     <Button
         android:id="@+id/btnDel"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:layout_marginEnd="36dp"
+        style="@style/button2"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="39dp"
         android:text="DELETE"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/UpdateContainer" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/UpdateContainer"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="20dp"
@@ -112,7 +112,7 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/upVariantContainer"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="20dp"
