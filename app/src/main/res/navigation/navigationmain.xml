@@ -5,58 +5,45 @@
     android:id="@+id/navigationmain"
     app:startDestination="@id/home">
 
-
     <fragment
         android:id="@+id/home"
         android:name="com.example.happytree.Home"
         android:label="Happy Tree"
         tools:layout="@layout/fragment_home" />
+
     <fragment
         android:id="@+id/diseases"
         android:name="com.example.happytree.Diseases"
         android:label="Mango Tree Diseases"
         tools:layout="@layout/fragment_diseases" />
+
     <fragment
         android:id="@+id/inputFragment"
         android:name="com.example.happytree.InputFragment"
         android:label="Add"
         tools:layout="@layout/fragment_input" >
         <action
-            android:id="@+id/action_inputFragment_to_updateFragment"
-            app:destination="@id/updateFragment" />
-        <action
             android:id="@+id/action_inputFragment_to_viewFragment"
-            app:destination="@id/viewFragment" />
-        <action
-            android:id="@+id/action_inputFragment_to_updateFragment2"
-            app:destination="@id/updateFragment" />
+            app:destination="@id/viewFragment"
+            app:popUpTo="@id/viewFragment"
+            app:popUpToInclusive="true" />
     </fragment>
+
     <fragment
         android:id="@+id/updateFragment"
         android:name="com.example.happytree.UpdateFragment"
         android:label="Update"
         tools:layout="@layout/fragment_update" >
-
         <argument
             android:name="farmdetails"
             app:argType="com.example.happytree.database.FarmDatabase.Farm"/>
-
-        <action
-            android:id="@+id/action_updateFragment_to_inputFragment"
-            app:destination="@id/inputFragment" />
         <action
             android:id="@+id/action_updateFragment_to_viewFragment"
-            app:destination="@id/viewFragment" />
-        <action
-            android:id="@+id/action_updateFragment_to_inputFragment2"
-            app:destination="@id/inputFragment" />
-        <action
-            android:id="@+id/action_updateFragment_to_inputFragment3"
-            app:destination="@id/inputFragment" />
-        <action
-            android:id="@+id/action_updateFragment_to_viewFragment2"
-            app:destination="@id/viewFragment" />
+            app:destination="@id/viewFragment"
+            app:popUpTo="@id/viewFragment"
+            app:popUpToInclusive="true" />
     </fragment>
+
     <fragment
         android:id="@+id/viewFragment"
         android:name="com.example.happytree.ViewFragment"
@@ -64,15 +51,17 @@
         tools:layout="@layout/fragment_view" >
         <action
             android:id="@+id/action_viewFragment_to_inputFragment"
-            app:destination="@id/inputFragment" />
+            app:destination="@id/inputFragment"
+            app:popUpTo="@id/viewFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_viewFragment_to_home"
+            app:destination="@id/home"
+            app:popUpTo="@id/home"
+            app:popUpToInclusive="true" />
         <action
             android:id="@+id/action_viewFragment_to_updateFragment"
             app:destination="@id/updateFragment" />
-        <action
-            android:id="@+id/action_viewFragment_to_updateFragment2"
-            app:destination="@id/updateFragment" />
-        <action
-            android:id="@+id/action_viewFragment_to_inputFragment2"
-            app:destination="@id/inputFragment" />
     </fragment>
+
 </navigation>

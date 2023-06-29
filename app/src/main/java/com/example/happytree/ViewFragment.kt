@@ -3,6 +3,7 @@ package com.example.happytree
 import android.app.AlertDialog
 import android.os.Bundle
 import android.view.LayoutInflater
+import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
@@ -51,6 +52,8 @@ class ViewFragment : Fragment() {
             deleteAllItems()
         }
 
+        setHasOptionsMenu(true) // Enable options menu for the fragment
+
         return binding.root
     }
 
@@ -65,4 +68,15 @@ class ViewFragment : Fragment() {
             .setNegativeButton("Cancel", null)
             .show()
     }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
+            android.R.id.home -> {
+                findNavController().popBackStack(R.id.home, false)
+                return true
+            }
+        }
+        return super.onOptionsItemSelected(item)
+    }
+
 }

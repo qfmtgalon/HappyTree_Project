@@ -12,6 +12,8 @@ import com.example.happytree.databinding.ActivityHomeBinding
 
 
 class HomeActivity : AppCompatActivity() {
+
+
     private lateinit var binding: ActivityHomeBinding
     private lateinit var drawerLayout: DrawerLayout
 
@@ -29,6 +31,7 @@ class HomeActivity : AppCompatActivity() {
         NavigationUI.setupWithNavController(binding.navView, navController)
         NavigationUI.setupWithNavController(binding.navBottom, navController)
     }
+
 
     override fun onSupportNavigateUp(): Boolean {
         val navController = this.findNavController(R.id.myNavHost)
