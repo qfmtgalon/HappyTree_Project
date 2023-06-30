@@ -31,12 +31,6 @@
                 android:title="FAQs"/>
 
             <item
-                android:id="@+id/navprofile"
-                android:icon="@drawable/navprofile2"
-                android:title="Profile"
-                />
-
-            <item
                 android:onClick="logout"
                 android:icon="@drawable/ic_baseline_logout_24"
                 android:title="Logout"/>

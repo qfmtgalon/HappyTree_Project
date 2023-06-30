@@ -6,5 +6,6 @@
     <item name="navView" type="id" />
     <item name="navBottom" type="id" />
     <item name="bottomWeather" type="id" />
-    <item name="imagewelcome" type="id" />\
+    <item name="imagewelcome" type="id" />
+    <item name="bgDate" type="id" />\
 </resources>

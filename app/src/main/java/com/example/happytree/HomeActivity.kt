@@ -27,10 +27,12 @@ class HomeActivity : AppCompatActivity() {
             supportFragmentManager.findFragmentById(R.id.myNavHost) as NavHostFragment
         val navController = navHostFragment.navController
 
+
         NavigationUI.setupActionBarWithNavController(this, navController, drawerLayout)
         NavigationUI.setupWithNavController(binding.navView, navController)
         NavigationUI.setupWithNavController(binding.navBottom, navController)
     }
+
 
 
     override fun onSupportNavigateUp(): Boolean {

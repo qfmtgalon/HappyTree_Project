@@ -5,38 +5,63 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/homebg6"
+    android:background="@drawable/gradient"
     tools:context="com.example.happytree.Home">
 
 
-    <TextView
-        android:id="@+id/textDate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <androidx.gridlayout.widget.GridLayout
+        android:id="@+id/Grid1"
+        android:layout_width="349dp"
+        android:layout_height="113dp"
         android:layout_marginTop="45dp"
-        android:layout_marginBottom="110dp"
-        android:fontFamily="@font/lato_bold"
-        android:text="TextView"
-        android:textAllCaps="true"
-        android:textColor="@color/colorPrimary"
-        android:textSize="28sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/gridLayout"
+        app:columnCount="1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:rowCount="3"
+        app:orientation="vertical">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/bgDate"
+            style="@style/CardViewStyle"
+            android:backgroundTint="@color/colorSecondaryVariant"
+            app:layout_column="0"
+            app:layout_columnWeight="1"
+            app:layout_row="1"
+            app:layout_rowWeight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/textDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/lato_bold"
+                    android:text="TextView"
+                    android:textAllCaps="true"
+                    android:textColor="@color/colorSecondary"
+                    android:textSize="28sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+    </androidx.gridlayout.widget.GridLayout>
+
 
     <androidx.gridlayout.widget.GridLayout
         android:id="@+id/gridLayout"
-        android:layout_width="370dp"
-        android:layout_height="500dp"
+        android:layout_width="367dp"
+        android:layout_height="394dp"
         android:layout_below="@id/textDate"
-        android:layout_marginTop="35dp"
+        android:layout_marginTop="25dp"
         android:background="@android:color/transparent"
         app:columnCount="2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textDate"
+        app:layout_constraintTop_toBottomOf="@+id/Grid1"
         app:rowCount="3"
         tools:ignore="NotSibling">
 
@@ -68,7 +93,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
                     android:text="MY FARM"
-                    android:textColor="@color/colorOnPrimaryContainer"
+                    android:textColor="@color/colorPrimaryVariant"
                     android:textSize="18sp"
                     android:textStyle="bold" />
             </LinearLayout>
@@ -104,7 +129,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
                     android:text="Add"
-                    android:textColor="@color/colorOnPrimaryContainer"
+                    android:textColor="@color/colorPrimaryVariant"
                     android:textSize="18sp"
                     android:textStyle="bold" />
             </LinearLayout>
@@ -137,7 +162,7 @@
                     android:layout_gravity="center_horizontal"
                     android:text="Mango Tree Diseases"
                     android:textAlignment="center"
-                    android:textColor="@color/colorOnPrimaryContainer"
+                    android:textColor="@color/colorPrimaryVariant"
                     android:textSize="18sp"
                     android:textStyle="bold" />
             </LinearLayout>
@@ -169,7 +194,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
                     android:text="MY FARM"
-                    android:textColor="@color/colorOnPrimaryContainer"
+                    android:textColor="@color/colorPrimaryVariant"
                     android:textSize="18sp"
                     android:textStyle="bold" />
             </LinearLayout>

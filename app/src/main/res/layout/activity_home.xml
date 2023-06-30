@@ -10,6 +10,7 @@
 
     <androidx.drawerlayout.widget.DrawerLayout
         android:id="@id/drawerLayout"
+        android:backgroundTint="@color/colorPrimaryVariant"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -33,7 +34,9 @@
 
         <com.google.android.material.navigation.NavigationView
             android:id="@id/navView"
-            android:layout_width="match_parent"
+            android:layout_width="240dp"
+            android:background="@color/colorPrimaryVariant"
+            app:itemTextColor="@color/colorPrimary"
             android:layout_height="match_parent"
             android:layout_gravity="start"
             app:headerLayout="@layout/nav_header"

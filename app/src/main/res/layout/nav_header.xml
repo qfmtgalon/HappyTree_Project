@@ -5,16 +5,17 @@
     android:id="@+id/navHeader"
     android:layout_width="match_parent"
     android:layout_height="130dp"
-    android:background="@color/colorSecondary"
+    android:background="@color/colorPrimary"
     android:padding="16dp">
 
     <ImageView
-        android:id="@+id/happytreelogo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/hplogo"
+        android:layout_width="115dp"
+        android:layout_height="94dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/happytreelogo" />
+        app:srcCompat="@drawable/hplogo" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

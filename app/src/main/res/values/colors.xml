@@ -14,17 +14,17 @@
 
 
 
-    <color name="colorPrimary">#236F53</color> <!-- color sa app bar-->
-    <color name="colorPrimaryVariant">#ADE792</color>
-    <color name="colorOnPrimary">#F3F0BB</color>
+    <color name="colorPrimary">#356B50</color> <!-- color sa app bar-->
+    <color name="colorPrimaryVariant">#C9DBAB</color>
+    <color name="colorOnPrimary">#FFFFFF</color>
 
     <!-- Secondary brand color. -->
-    <color name="colorSecondary">#0D5C63</color>  <!-- bottm nav at nav drawer-->
-    <color name="colorSecondaryVariant">#018786</color>
+    <color name="colorSecondary">#254D32</color>  <!-- bottm nav at nav drawer-->
+    <color name="colorSecondaryVariant">#6F9667</color>#254D32
     <color name="colorOnSecondary">#000000</color>
 
     <color name="colorPrimaryContainer">#236F53</color> #
-    <color name="colorOnPrimaryContainer">#F3F0BB</color>
+    <color name="colorOnPrimaryContainer">#356B50</color>
     <color name="colorAccent">#3087A2</color>
 
 
