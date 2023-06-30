@@ -46,7 +46,7 @@
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         style="@style/BottomNavigationStyle"
-        android:id="@id/navBottom"
+        android:id="@+id/navBottom"
         android:background="?android:attr/windowBackground"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

@@ -19,9 +19,9 @@
     <color name="colorOnPrimary">#FFFFFF</color>
 
     <!-- Secondary brand color. -->
-    <color name="colorSecondary">#254D32</color>  <!-- bottm nav at nav drawer-->
+    <color name="colorSecondary">#366B51</color>  <!-- bottm nav at nav drawer-->
     <color name="colorSecondaryVariant">#6F9667</color>#254D32
-    <color name="colorOnSecondary">#000000</color>
+    <color name="colorOnSecondary">#CEDBD4</color>
 
     <color name="colorPrimaryContainer">#236F53</color> #
     <color name="colorOnPrimaryContainer">#356B50</color>

@@ -5,7 +5,7 @@
     android:id="@+id/FragmentAbout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ADE792"
+    android:background="@color/colorOnSecondary"
     tools:context="com.example.happytree.About" >
 
     <TextView
