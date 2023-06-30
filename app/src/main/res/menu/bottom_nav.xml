@@ -4,14 +4,8 @@
 
     <item
         android:id="@id/viewFragment"
-        android:icon="@drawable/ic_baseline_calendar_month_24"
-        android:title="Today" />
-
-    <item
-        android:id="@id/bottomFarm"
         android:icon="@drawable/bottom_farm"
-        android:title="My Farm"
-        />
+        android:title="My Farm" />
 
     <item
         android:id="@+id/home"

@@ -14,7 +14,6 @@ import java.util.*
 
 class Home : Fragment() {
 
-
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -27,11 +26,17 @@ class Home : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val currentDate = view.findViewById<TextView>(R.id.textDate)
-        val dateFormat = SimpleDateFormat("dd MMMM yyyy", Locale.getDefault())
+        val textDay = view.findViewById<TextView>(R.id.textDay)
+        val textDate = view.findViewById<TextView>(R.id.textDate)
+
+        val dateFormat = SimpleDateFormat("EEEE", Locale.getDefault())
         val date = Date()
-        val formattedDate = dateFormat.format(date)
-        currentDate.text = formattedDate
+        val dayOfWeek = dateFormat.format(date)
+        textDay.text = dayOfWeek
+
+        val dateFormatMonth = SimpleDateFormat("dd MMMM yyyy", Locale.getDefault())
+        val formattedDate = dateFormatMonth.format(date)
+        textDate.text = formattedDate
 
         val btnAdd = view.findViewById<MaterialCardView>(R.id.btnAdd)
         btnAdd.setOnClickListener {
@@ -44,4 +49,5 @@ class Home : Fragment() {
             val navController = Navigation.findNavController(view)
             navController.navigate(R.id.viewFragment)
         }
-    }}
+    }
+}
