@@ -115,6 +115,7 @@
             android:id="@+id/action_viewFragment_to_treeDiseases"
             app:destination="@id/treeDiseases" />
     </fragment>
+
     <fragment
         android:id="@+id/about"
         android:name="com.example.happytree.About"
@@ -127,6 +128,8 @@
             android:id="@+id/action_about_to_viewFragment"
             app:destination="@id/viewFragment" />
     </fragment>
+
+
     <fragment
         android:id="@+id/FAQs"
         android:name="com.example.happytree.FAQs"
@@ -139,6 +142,8 @@
             android:id="@+id/action_FAQs_to_viewFragment"
             app:destination="@id/viewFragment" />
     </fragment>
+
+
     <fragment
         android:id="@+id/treeDiseases"
         android:name="com.example.happytree.TreeDiseases"
