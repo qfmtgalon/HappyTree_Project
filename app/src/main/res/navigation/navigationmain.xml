@@ -22,12 +22,6 @@
     </fragment>
 
     <fragment
-        android:id="@+id/diseases"
-        android:name="com.example.happytree.Diseases"
-        android:label="Mango Tree Diseases"
-        tools:layout="@layout/fragment_diseases" />
-
-    <fragment
         android:id="@+id/inputFragment"
         android:name="com.example.happytree.InputFragment"
         android:label="Add"
@@ -37,6 +31,21 @@
             app:destination="@id/viewFragment"
             app:popUpTo="@id/viewFragment"
             app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_inputFragment_to_home"
+            app:destination="@id/home" />
+        <action
+            android:id="@+id/action_inputFragment_to_about"
+            app:destination="@id/about" />
+        <action
+            android:id="@+id/action_inputFragment_to_FAQs"
+            app:destination="@id/FAQs" />
+        <action
+            android:id="@+id/action_inputFragment_to_careFragment"
+            app:destination="@id/careFragment" />
+        <action
+            android:id="@+id/action_inputFragment_to_treeDiseases"
+            app:destination="@id/treeDiseases" />
     </fragment>
 
     <fragment
@@ -52,6 +61,21 @@
             app:destination="@id/viewFragment"
             app:popUpTo="@id/viewFragment"
             app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_updateFragment_to_home"
+            app:destination="@id/home" />
+        <action
+            android:id="@+id/action_updateFragment_to_about"
+            app:destination="@id/about" />
+        <action
+            android:id="@+id/action_updateFragment_to_FAQs"
+            app:destination="@id/FAQs" />
+        <action
+            android:id="@+id/action_updateFragment_to_careFragment"
+            app:destination="@id/careFragment" />
+        <action
+            android:id="@+id/action_updateFragment_to_treeDiseases"
+            app:destination="@id/treeDiseases" />
     </fragment>
 
     <fragment
@@ -72,21 +96,72 @@
         <action
             android:id="@+id/action_viewFragment_to_updateFragment"
             app:destination="@id/updateFragment" />
+        <action
+            android:id="@+id/action_viewFragment_to_home2"
+            app:destination="@id/home" />
+        <action
+            android:id="@+id/action_viewFragment_to_home3"
+            app:destination="@id/home" />
+        <action
+            android:id="@+id/action_viewFragment_to_about"
+            app:destination="@id/about" />
+        <action
+            android:id="@+id/action_viewFragment_to_FAQs"
+            app:destination="@id/FAQs" />
+        <action
+            android:id="@+id/action_viewFragment_to_careFragment"
+            app:destination="@id/careFragment" />
+        <action
+            android:id="@+id/action_viewFragment_to_treeDiseases"
+            app:destination="@id/treeDiseases" />
     </fragment>
     <fragment
         android:id="@+id/about"
         android:name="com.example.happytree.About"
         android:label="About"
-        tools:layout="@layout/fragment_about" />
+        tools:layout="@layout/fragment_about" >
+        <action
+            android:id="@+id/action_about_to_home"
+            app:destination="@id/home" />
+        <action
+            android:id="@+id/action_about_to_viewFragment"
+            app:destination="@id/viewFragment" />
+    </fragment>
     <fragment
         android:id="@+id/FAQs"
         android:name="com.example.happytree.FAQs"
         android:label="FAQs"
-        tools:layout="@layout/fragment_f_a_qs" />
+        tools:layout="@layout/fragment_f_a_qs" >
+        <action
+            android:id="@+id/action_FAQs_to_home"
+            app:destination="@id/home" />
+        <action
+            android:id="@+id/action_FAQs_to_viewFragment"
+            app:destination="@id/viewFragment" />
+    </fragment>
     <fragment
         android:id="@+id/treeDiseases"
         android:name="com.example.happytree.TreeDiseases"
         android:label="Mango Tree Diseases"
-        tools:layout="@layout/fragment_tree_diseases" />
+        tools:layout="@layout/fragment_tree_diseases" >
+        <action
+            android:id="@+id/action_treeDiseases_to_home"
+            app:destination="@id/home" />
+        <action
+            android:id="@+id/action_treeDiseases_to_viewFragment"
+            app:destination="@id/viewFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/careFragment"
+        android:name="com.example.happytree.CareFragment"
+        android:label="fragment_care"
+        tools:layout="@layout/fragment_care" >
+        <action
+            android:id="@+id/action_careFragment_to_home"
+            app:destination="@id/home" />
+        <action
+            android:id="@+id/action_careFragment_to_viewFragment"
+            app:destination="@id/viewFragment" />
+    </fragment>
 
 </navigation>
