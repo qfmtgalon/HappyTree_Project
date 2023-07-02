@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navigationmain"
-    app:startDestination="@id/home">
+    app:startDestination="@id/homeActivity">
 
     <fragment
         android:id="@+id/homeFragment"
@@ -170,5 +170,11 @@
             android:id="@+id/action_careFragment_to_viewFragment"
             app:destination="@id/viewFragment" />
     </fragment>
+
+
+    <activity
+        android:id="@+id/homeActivity"
+        android:name="com.example.happytree.HomeActivity"
+        android:label="HomeActivity" />
 
 </navigation>

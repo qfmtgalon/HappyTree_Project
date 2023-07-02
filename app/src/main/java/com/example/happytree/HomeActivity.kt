@@ -1,20 +1,26 @@
 package com.example.happytree
 
 import android.os.Bundle
+import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
-import androidx.drawerlayout.widget.DrawerLayout
-import com.example.happytree.databinding.ActivityHomeBinding
 
+
+import androidx.navigation.Navigation
 
 class HomeActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityHomeBinding
-    private lateinit var drawerLayout: DrawerLayout
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityHomeBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+        setContentView(R.layout.activity_home)
 
+        val navController = Navigation.findNavController(this, R.id.myNavHostFragment)
+        navController.navigate(R.id.homeActivity)
     }
+
+    fun logout(item: MenuItem) {
+
+        // Handle logout action here
+    }
+
 }
+
