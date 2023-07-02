@@ -7,5 +7,8 @@
     <item name="navBottom" type="id" />
     <item name="bottomWeather" type="id" />
     <item name="imagewelcome" type="id" />
-    <item name="bgDate" type="id" />\
+    <item name="bgDate" type="id" />
+    <item name="Grid1" type="id" />
+    <item name="textDay" type="id" />
+    <item name="textDate" type="id" />
 </resources>

@@ -72,7 +72,7 @@ class ViewFragment : Fragment() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             android.R.id.home -> {
-                findNavController().popBackStack(R.id.home, false)
+                findNavController().popBackStack(R.id.homeFragment, false)
                 return true
             }
         }

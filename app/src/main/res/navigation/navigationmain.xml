@@ -6,19 +6,19 @@
     app:startDestination="@id/home">
 
     <fragment
-        android:id="@+id/home"
+        android:id="@+id/homeFragment"
         android:name="com.example.happytree.Home"
         android:label="Happy Tree"
         tools:layout="@layout/fragment_home" >
         <action
             android:id="@+id/action_home_to_treeDiseases"
-            app:destination="@id/treeDiseases" />
+            app:destination="@id/treeDiseasesFragment" />
         <action
             android:id="@+id/action_home_to_FAQs"
-            app:destination="@id/FAQs" />
+            app:destination="@id/faqsFragment" />
         <action
             android:id="@+id/action_home_to_about"
-            app:destination="@id/about" />
+            app:destination="@id/aboutFragment" />
     </fragment>
 
     <fragment
@@ -36,16 +36,16 @@
             app:destination="@id/home" />
         <action
             android:id="@+id/action_inputFragment_to_about"
-            app:destination="@id/about" />
+            app:destination="@id/aboutFragment" />
         <action
             android:id="@+id/action_inputFragment_to_FAQs"
-            app:destination="@id/FAQs" />
+            app:destination="@id/faqsFragment" />
         <action
             android:id="@+id/action_inputFragment_to_careFragment"
             app:destination="@id/careFragment" />
         <action
             android:id="@+id/action_inputFragment_to_treeDiseases"
-            app:destination="@id/treeDiseases" />
+            app:destination="@id/treeDiseasesFragment" />
     </fragment>
 
     <fragment
@@ -66,16 +66,16 @@
             app:destination="@id/home" />
         <action
             android:id="@+id/action_updateFragment_to_about"
-            app:destination="@id/about" />
+            app:destination="@id/aboutFragment" />
         <action
             android:id="@+id/action_updateFragment_to_FAQs"
-            app:destination="@id/FAQs" />
+            app:destination="@id/faqsFragment" />
         <action
             android:id="@+id/action_updateFragment_to_careFragment"
             app:destination="@id/careFragment" />
         <action
             android:id="@+id/action_updateFragment_to_treeDiseases"
-            app:destination="@id/treeDiseases" />
+            app:destination="@id/treeDiseasesFragment" />
     </fragment>
 
     <fragment
@@ -104,20 +104,20 @@
             app:destination="@id/home" />
         <action
             android:id="@+id/action_viewFragment_to_about"
-            app:destination="@id/about" />
+            app:destination="@id/aboutFragment" />
         <action
             android:id="@+id/action_viewFragment_to_FAQs"
-            app:destination="@id/FAQs" />
+            app:destination="@id/faqsFragment" />
         <action
             android:id="@+id/action_viewFragment_to_careFragment"
             app:destination="@id/careFragment" />
         <action
             android:id="@+id/action_viewFragment_to_treeDiseases"
-            app:destination="@id/treeDiseases" />
+            app:destination="@id/treeDiseasesFragment" />
     </fragment>
 
     <fragment
-        android:id="@+id/about"
+        android:id="@+id/aboutFragment"
         android:name="com.example.happytree.About"
         android:label="About"
         tools:layout="@layout/fragment_about" >
@@ -131,7 +131,7 @@
 
 
     <fragment
-        android:id="@+id/FAQs"
+        android:id="@+id/faqsFragment"
         android:name="com.example.happytree.FAQs"
         android:label="FAQs"
         tools:layout="@layout/fragment_f_a_qs" >
@@ -145,7 +145,7 @@
 
 
     <fragment
-        android:id="@+id/treeDiseases"
+        android:id="@+id/treeDiseasesFragment"
         android:name="com.example.happytree.TreeDiseases"
         android:label="Mango Tree Diseases"
         tools:layout="@layout/fragment_tree_diseases" >
@@ -156,6 +156,8 @@
             android:id="@+id/action_treeDiseases_to_viewFragment"
             app:destination="@id/viewFragment" />
     </fragment>
+
+
     <fragment
         android:id="@+id/careFragment"
         android:name="com.example.happytree.CareFragment"

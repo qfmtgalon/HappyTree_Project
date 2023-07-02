@@ -2,33 +2,33 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/home"
+        android:id="@+id/drawer_home"
         android:icon="@drawable/ic_baseline_home_24"
-        android:title="Home"/>
+        android:title="@string/menu_home"/>
 
     <item
-        android:id="@+id/viewFragment"
+        android:id="@+id/drawer_view"
         android:icon="@drawable/navfarm"
-        android:title="My Farm" />
+        android:title="@string/menu_view" />
 
     <item
-        android:id="@+id/treeDiseases"
+        android:id="@+id/drawer_diseases"
         android:icon="@drawable/navdisease"
-        android:title="Mango Tree Disease"/>
+        android:title="@string/menu_treediseases"/>
 
 
     <item android:title="">
         <menu>
 
             <item
-                android:id="@+id/about"
+                android:id="@+id/drawer_about"
                 android:icon="@drawable/svg_about"
-                android:title="About"/>
+                android:title="@string/menu_about"/>
 
             <item
-                android:id="@+id/FAQs"
+                android:id="@+id/drawer_faqs"
                 android:icon="@drawable/ic_baseline_question_mark_24"
-                android:title="FAQs"/>
+                android:title="@string/menu_faqs"/>
 
             <item
                 android:onClick="logout"

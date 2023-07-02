@@ -3,18 +3,18 @@
 
 
     <item
-        android:id="@id/viewFragment"
+        android:id="@+id/bottom_view"
         android:icon="@drawable/bottom_farm"
-        android:title="My Farm" />
+        android:title="@string/menu_view" />
 
     <item
-        android:id="@+id/home"
+        android:id="@+id/bottom_home"
         android:icon="@drawable/bottom_home2"
-        android:title="Home"/>
+        android:title="@string/menu_home"/>
 
     <item
-        android:id="@+id/careFragment"
+        android:id="@+id/bottom_care"
         android:icon="@drawable/ic_care"
-        android:title="Care Guide"/>
+        android:title="@string/menu_care"/>
 
 </menu>
