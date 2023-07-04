@@ -20,7 +20,7 @@
     <fragment
         android:id="@+id/login"
         android:name="com.example.happytree.Login"
-        android:label="fragment_login"
+        android:label="Login"
         tools:layout="@layout/fragment_login" >
         <action
             android:id="@+id/action_login_to_registration"
@@ -29,7 +29,7 @@
     <fragment
         android:id="@+id/registration"
         android:name="com.example.happytree.Registration"
-        android:label="fragment_registration"
+        android:label="Sign-up"
         tools:layout="@layout/fragment_registration" >
         <action
             android:id="@+id/action_registration_to_login"

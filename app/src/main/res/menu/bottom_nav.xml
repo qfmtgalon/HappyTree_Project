@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <item
-        android:id="@id/bottomFarm"
-        android:icon="@drawable/bottom_farm"
-        android:title="Farm"
-        />
 
     <item
-        android:id="@+id/bottomHome"
+        android:id="@id/viewFragment"
+        android:icon="@drawable/bottom_farm"
+        android:title="My Farm" />
+
+    <item
+        android:id="@+id/home"
         android:icon="@drawable/bottom_home2"
         android:title="Home"/>
 
     <item
-        android:id="@+id/bottomDisease"
-        android:icon="@drawable/bottom_treedisease"
-        android:title="Tree Disease"/>
+        android:id="@+id/careFragment"
+        android:icon="@drawable/ic_care"
+        android:title="Care"/>
 
 </menu>

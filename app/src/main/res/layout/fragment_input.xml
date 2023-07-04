@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#D9E7CB"
+    tools:context=".InputFragment">
+
+
+    <TextView
+        android:id="@+id/txtAddTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:fontFamily="@font/montserrat"
+        android:text="ADD ITEM"
+        android:textColor="#000000"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/diseaseContainer"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="60dp"
+        app:endIconMode="clear_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtAddTitle">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/InputDisease"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="@string/disease"
+            android:inputType="textPersonName"
+            android:lines="1" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/variantContainer"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="28dp"
+        app:endIconMode="clear_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/diseaseContainer">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/Variant"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Variant"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            android:textColor="#000000" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/numTreeContainer"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="28dp"
+        app:endIconMode="clear_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/variantContainer">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/numTree"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="@string/numTree"
+            android:inputType="numberDecimal"
+            android:lines="1" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/dateTimeContainer"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="28dp"
+        app:endIconMode="clear_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/numTreeContainer">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/dateTime"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="@string/dateTime"
+            android:inputType="datetime"
+            android:lines="1" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/BtnInputReg"
+        style="@style/button2"
+        android:layout_marginStart="39dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="40dp"
+        android:text="ADD"
+        app:layout_constraintEnd_toStartOf="@+id/BtnCancel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dateTimeContainer" />
+
+    <Button
+        android:id="@+id/BtnCancel"
+        style="@style/button2"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="39dp"
+        android:text="Cancel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dateTimeContainer" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="variant_options">
+        <item>Carabao Mango</item>
+        <item>Indian Mango</item>
+        <item>Apple Mango</item>
+        <item>Ataulfo Mango</item>
+        <item>Pico Mango</item>
+    </string-array>
+
+</resources>
