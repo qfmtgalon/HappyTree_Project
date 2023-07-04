@@ -19,13 +19,10 @@
         <action
             android:id="@+id/action_home_to_about"
             app:destination="@id/about" />
+        <action
+            android:id="@+id/action_home_to_careFragment2"
+            app:destination="@id/careFragment" />
     </fragment>
-
-    <fragment
-        android:id="@+id/diseases"
-        android:name="com.example.happytree.Diseases"
-        android:label="Mango Tree Diseases"
-        tools:layout="@layout/fragment_diseases" />
 
     <fragment
         android:id="@+id/inputFragment"
@@ -88,5 +85,14 @@
         android:name="com.example.happytree.TreeDiseases"
         android:label="Mango Tree Diseases"
         tools:layout="@layout/fragment_tree_diseases" />
+    <fragment
+        android:id="@+id/careFragment"
+        android:name="com.example.happytree.CareFragment"
+        android:label="fragment_care"
+        tools:layout="@layout/fragment_care" >
+        <action
+            android:id="@+id/action_careFragment_to_home"
+            app:destination="@id/home" />
+    </fragment>
 
 </navigation>
