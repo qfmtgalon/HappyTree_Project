@@ -7,5 +7,6 @@
     <item name="navBottom" type="id" />
     <item name="bottomWeather" type="id" />
     <item name="imagewelcome" type="id" />
-    <item name="bgDate" type="id" />\
+    <item name="bgDate" type="id" />
+    <item name="nav_logout" type="id"/>
 </resources>
