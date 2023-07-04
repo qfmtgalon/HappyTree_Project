@@ -19,7 +19,6 @@ class Home : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_home, container, false)
     }
 
@@ -40,14 +39,26 @@ class Home : Fragment() {
 
         val btnAdd = view.findViewById<MaterialCardView>(R.id.btnAdd)
         btnAdd.setOnClickListener {
-            val navController = Navigation.findNavController(view)
+            val navController = Navigation.findNavController(requireActivity(), R.id.myNavHost)
             navController.navigate(R.id.inputFragment)
         }
 
         val btnViewFarm = view.findViewById<MaterialCardView>(R.id.btnViewFarm)
-        btnViewFarm.setOnClickListener{
-            val navController = Navigation.findNavController(view)
+        btnViewFarm.setOnClickListener {
+            val navController = Navigation.findNavController(requireActivity(), R.id.myNavHost)
             navController.navigate(R.id.viewFragment)
+        }
+
+        val btnDiseases = view.findViewById<MaterialCardView>(R.id.btnDiseases)
+        btnDiseases.setOnClickListener {
+            val navController = Navigation.findNavController(requireActivity(), R.id.myNavHost)
+            navController.navigate(R.id.treeDiseases)
+        }
+
+        val btnInfo = view.findViewById<MaterialCardView>(R.id.btnInfo)
+        btnInfo.setOnClickListener {
+            val navController = Navigation.findNavController(requireActivity(), R.id.myNavHost)
+            navController.navigate(R.id.moreInfoFragment)
         }
     }
 }

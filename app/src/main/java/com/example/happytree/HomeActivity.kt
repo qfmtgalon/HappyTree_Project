@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.MenuItem
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
@@ -52,6 +53,9 @@ class HomeActivity : AppCompatActivity() {
                     finish()
                 }
             }
+            //close the navigation drawer
+            //GravityCompat.START to make sure that the drawer is closed on te start
+            drawerLayout.closeDrawer(GravityCompat.START)
             true
         }
 
@@ -60,7 +64,7 @@ class HomeActivity : AppCompatActivity() {
             when (item.itemId) {
                 R.id.home -> navController.navigate(R.id.home)
                 R.id.viewFragment -> navController.navigate(R.id.viewFragment)
-                R.id.careFragment -> navController.navigate(R.id.careFragment)
+                R.id.moreInfoFragment -> navController.navigate(R.id.moreInfoFragment)
             }
             true
         }

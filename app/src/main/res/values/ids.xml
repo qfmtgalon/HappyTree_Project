@@ -9,4 +9,5 @@
     <item name="imagewelcome" type="id" />
     <item name="bgDate" type="id" />
     <item name="nav_logout" type="id"/>
+    <item name="btnDiseases" type="id"/>
 </resources>

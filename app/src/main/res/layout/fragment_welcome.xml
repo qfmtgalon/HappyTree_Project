@@ -11,8 +11,8 @@
     <Button
         android:id="@+id/btnGetStarted"
         style="@style/button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="312dp"
+        android:layout_height="50dp"
         android:layout_marginTop="550dp"
         android:text="Get Started"
         app:layout_constraintEnd_toEndOf="parent"
@@ -21,8 +21,8 @@
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="391dp"
-        android:layout_height="374dp"
+        android:layout_width="369dp"
+        android:layout_height="362dp"
         android:layout_marginBottom="52dp"
         android:src="@drawable/happytreewel"
         app:layout_constraintBottom_toTopOf="@+id/btnGetStarted"

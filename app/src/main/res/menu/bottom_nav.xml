@@ -13,8 +13,8 @@
         android:title="Home"/>
 
     <item
-        android:id="@+id/careFragment"
-        android:icon="@drawable/ic_care"
-        android:title="Care"/>
+        android:id="@+id/moreInfoFragment"
+        android:icon="@drawable/ic_info"
+        android:title="More Info"/>
 
 </menu>

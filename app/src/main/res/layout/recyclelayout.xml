@@ -30,7 +30,7 @@
                 android:capitalize="characters"
                 android:minHeight="48dp"
                 android:text="Disease"
-                android:textColor="@color/colorSecondary"
+                android:textColor="@color/colorPrimaryVariant"
                 android:textSize="20dp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"

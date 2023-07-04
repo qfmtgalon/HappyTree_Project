@@ -20,8 +20,11 @@
             android:id="@+id/action_home_to_about"
             app:destination="@id/about" />
         <action
-            android:id="@+id/action_home_to_careFragment2"
+            android:id="@+id/action_home_to_careFragment"
             app:destination="@id/careFragment" />
+        <action
+            android:id="@+id/action_home_to_moreInfoFragment"
+            app:destination="@id/moreInfoFragment" />
     </fragment>
 
     <fragment
@@ -84,7 +87,17 @@
         android:id="@+id/treeDiseases"
         android:name="com.example.happytree.TreeDiseases"
         android:label="Mango Tree Diseases"
-        tools:layout="@layout/fragment_tree_diseases" />
+        tools:layout="@layout/fragment_tree_diseases" >
+        <action
+            android:id="@+id/action_treeDiseases_to_anthracnose"
+            app:destination="@id/anthracnose" />
+        <action
+            android:id="@+id/action_treeDiseases_to_redRust"
+            app:destination="@id/redRust" />
+        <action
+            android:id="@+id/action_treeDiseases_to_sootyMold"
+            app:destination="@id/sootyMold" />
+    </fragment>
     <fragment
         android:id="@+id/careFragment"
         android:name="com.example.happytree.CareFragment"
@@ -93,6 +106,48 @@
         <action
             android:id="@+id/action_careFragment_to_home"
             app:destination="@id/home" />
+    </fragment>
+    <fragment
+        android:id="@+id/moreInfoFragment"
+        android:name="com.example.happytree.MoreInfoFragment"
+        android:label="fragment_more_info"
+        tools:layout="@layout/fragment_more_info" >
+        <action
+            android:id="@+id/action_moreInfoFragment_to_home"
+            app:destination="@id/home" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/anthracnose"
+        android:name="com.example.happytree.Anthracnose"
+        android:label="fragment_anthracnose"
+        tools:layout="@layout/fragment_anthracnose" >
+        <action
+            android:id="@+id/action_anthracnose_to_treeDiseases"
+            app:destination="@id/treeDiseases" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/sootyMold"
+        android:name="com.example.happytree.SootyMold"
+        android:label="fragment_sooty_mold"
+        tools:layout="@layout/fragment_sooty_mold" >
+        <action
+            android:id="@+id/action_sootyMold_to_treeDiseases"
+            app:destination="@id/treeDiseases" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/redRust"
+        android:name="com.example.happytree.RedRust"
+        android:label="fragment_red_rust"
+        tools:layout="@layout/fragment_red_rust" >
+        <action
+            android:id="@+id/action_redRust_to_treeDiseases"
+            app:destination="@id/treeDiseases" />
     </fragment>
 
 </navigation>

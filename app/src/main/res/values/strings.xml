@@ -20,13 +20,24 @@
     <string name="dateTextView">TextView</string>
     <string name="disease">Disease</string>
     <string name="dateTime">Date and Time</string>
-    <string name="numTree">No. of Trees</string>
-    <string name="txtDescrip">No. of trees affected: </string>
+    <string name="numTree">No. of trees infected</string>
+    <string name="txtDescrip">No. of trees infected: </string>
     <string name="change_username" />
     <string name="delete_account" />
     <string name="logout" />
     <string name="open">OPEN</string>
     <string name="close">close</string>
+
+
+    <string name="textTitle">ABOUT</string>
+    <string name="textCourse">BS Computer Engineering</string>
+    <string name="textName">Faith Mary T. Galon</string>
+    <string name="textElective">System Administration</string>
+    <string name="textEmail">qfmtgalon@tip.edu.ph</string>
+    <string name="textAns1">- The Happy Tree app is a mobile application designed to assist mango tree farmers in monitoring mango trees.</string>
+    <string name="txtQ1">What is the Happy Tree App?</string>
+    <string name="txtQ2">What kind of information about mango tree diseases can I find in the Happy Tree app?</string>
+    <string name="textAns2">- The Happy Tree app provides valuable information about mango tree diseases, helping users understand and address common issues affecting mango trees.</string>
 
 
 </resources>

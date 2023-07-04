@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".MoreInfoFragment">
+
+    <TextView
+        android:id="@+id/linkSite1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:autoLink="web"
+        android:textColorLink="@color/colorError"
+        tools:text="Website 1: www.example1.com" />
+
+    <TextView
+        android:id="@+id/linkSite2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:autoLink="web"
+        android:textColorLink="@color/colorError"
+        tools:text="Website 2: www.example2.com" />
+
+    <TextView
+        android:id="@+id/linkSite3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:autoLink="web"
+        android:textColorLink="@color/colorError"
+        tools:text="Website 3: www.example3.com" />
+
+    <TextView
+        android:id="@+id/linkSite4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:autoLink="web"
+        android:textColorLink="@color/colorError"
+        tools:text="Website 4: www.example4.com" />
+
+</LinearLayout>
+

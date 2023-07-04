@@ -131,16 +131,17 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
+                    android:layout_width="93dp"
+                    android:layout_height="84dp"
                     android:layout_gravity="center_horizontal"
-                    android:src="@drawable/bottom_farm" />
+                    android:src="@drawable/ic_add" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
                     android:text="Add"
+                    android:textAlignment="center"
                     android:textColor="@color/colorPrimaryVariant"
                     android:textSize="18sp"
                     android:textStyle="bold" />
@@ -148,6 +149,7 @@
         </com.google.android.material.card.MaterialCardView>
 
         <com.google.android.material.card.MaterialCardView
+            android:id="@+id/btnDiseases"
             style="@style/CardViewStyle"
             android:layout_margin="12dp"
             android:clickable="true"
@@ -166,7 +168,7 @@
                     android:layout_width="80dp"
                     android:layout_height="80dp"
                     android:layout_gravity="center_horizontal"
-                    android:src="@drawable/ic_baseline_farm" />
+                    android:src="@drawable/ic_deadtree" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -181,6 +183,7 @@
         </com.google.android.material.card.MaterialCardView>
 
         <com.google.android.material.card.MaterialCardView
+            android:id="@+id/btnInfo"
             style="@style/CardViewStyle"
             android:layout_margin="12dp"
             android:clickable="true"
@@ -199,13 +202,13 @@
                     android:layout_width="80dp"
                     android:layout_height="80dp"
                     android:layout_gravity="center_horizontal"
-                    android:src="@drawable/ic_baseline_farm" />
+                    android:src="@drawable/ic_home_info" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
-                    android:text="MY FARM"
+                    android:text="More Info"
                     android:textColor="@color/colorPrimaryVariant"
                     android:textSize="18sp"
                     android:textStyle="bold" />
