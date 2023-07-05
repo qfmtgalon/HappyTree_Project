@@ -1,14 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/gradient"
     tools:context=".Anthracnose">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+    <androidx.cardview.widget.CardView
+        style="@style/CardViewStyle"
+        android:layout_width="370dp"
+        android:layout_height="544dp"
+        android:layout_marginTop="44dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.326"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-</FrameLayout>
+        <!-- CardView contents go here -->
+
+        <LinearLayout
+            android:layout_width="374dp"
+            android:layout_height="592dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/media"
+                android:layout_width="166dp"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"/>
+<!--                android:src="@drawable/anthracnose_api_icon" -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="513dp"
+                android:orientation="vertical">
+
+                <!-- Header text -->
+
+                <!-- Subhead -->
+                <TextView
+                    android:id="@+id/header_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/anthracnose"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/subhead_for_anthracnose"
+                    android:layout_width="match_parent"
+                    android:layout_height="420dp"
+                    android:textSize="19sp" />
+                <!-- Button -->
+
+                <Button
+                    android:id="@+id/btnApI_anthracnose"
+                    android:layout_width="200dp"
+                    android:layout_height="62dp"
+                    android:ems="10"
+                    android:text="See more" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

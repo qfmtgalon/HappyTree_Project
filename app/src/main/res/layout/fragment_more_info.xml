@@ -1,43 +1,113 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/txtMoreInfo"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="16dp"
+    android:background="#D9E7CB"
     tools:context=".MoreInfoFragment">
+
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/lato_black"
+        android:text="@string/txtMoreInfoTittle"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/linkiew1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/lato_black"
+        android:text="@string/textLink1"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:layout_marginTop="40dp"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/linkSite1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:autoLink="web"
+        android:minHeight="48dp"
+        android:textColor="#0000FF"
         android:textColorLink="@color/colorError"
-        tools:text="Website 1: www.example1.com" />
+        tools:text="https://www.da.gov.ph/wp-content/uploads/2019/06/Philippine-Mango-Industry-Roadmap-2017-2022.pdf" />
+
+
+    <TextView
+        android:id="@+id/linkiew2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/lato_black"
+        android:text="@string/textLink2"
+        android:textAlignment="textStart"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/linkSite2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:autoLink="web"
+        android:minHeight="48dp"
+        android:textColor="#0000FF"
         android:textColorLink="@color/colorError"
-        tools:text="Website 2: www.example2.com" />
+        tools:text="https://www.agrifarming.in/mango-pests-diseases-and-control-methods-a-full-guide" />
+
+
+    <TextView
+        android:id="@+id/linkiew3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/lato_black"
+        android:text="@string/textLink3"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/linkSite3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:autoLink="web"
+        android:minHeight="48dp"
+        android:textColor="#0000FF"
         android:textColorLink="@color/colorError"
-        tools:text="Website 3: www.example3.com" />
+        tools:text="https://scholars.direct/Articles/plant-pathology/jppr-4-012.php?jid=plant-pathology" />
+
+
+    <TextView
+        android:id="@+id/linkiew4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/lato_black"
+        android:text="@string/textLink4"
+        android:textColor="@color/black"
+        android:textSize="16sp" />
 
     <TextView
         android:id="@+id/linkSite4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:autoLink="web"
+        android:minHeight="48dp"
+        android:textColor="#0000FF"
         android:textColorLink="@color/colorError"
-        tools:text="Website 4: www.example4.com" />
+        tools:text="https://www.agrifarming.in/mango-farming-in-philippines-how-to-start-varieties-planting-care-and-harvesting" />
 
 </LinearLayout>
 

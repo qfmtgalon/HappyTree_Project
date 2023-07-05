@@ -42,7 +42,7 @@
                     android:fontFamily="@font/lato_bold"
                     android:text="TextView"
                     android:textAllCaps="true"
-                    android:textColor="@color/colorOnSecondary"
+                    android:textColor="#254d32"
                     android:textSize="28sp"
                     android:textStyle="bold" />
 
@@ -53,7 +53,7 @@
                     android:fontFamily="@font/lato_bold"
                     android:text="TextView"
                     android:textAllCaps="true"
-                    android:textColor="@color/colorOnSecondary"
+                    android:textColor="#254d32"
                     android:textSize="20sp"
                     android:textStyle="bold"
                     android:paddingTop="8dp" />

@@ -30,10 +30,10 @@ class MoreInfoFragment : Fragment() {
         linkSite4 = rootView.findViewById(R.id.linkSite4)
 
         // Set the text and URLs for each link
-        linkSite1.text = "Website 1: https://www.agrifarming.in/mango-pests-diseases-and-control-methods-a-full-guide"
-        linkSite2.text = "Website 2: www.example2.com"
-        linkSite3.text = "Website 3: www.example3.com"
-        linkSite4.text = "Website 4: www.example4.com"
+        linkSite1.text = "https://www.themangofactory.com/growing-mangoes/pests-disease/mango-pests-and-diseases/"
+        linkSite2.text = "https://www.agrifarming.in/mango-pests-diseases-and-control-methods-a-full-guide"
+        linkSite3.text = "https://scholars.direct/Articles/plant-pathology/jppr-4-012.php?jid=plant-pathology"
+        linkSite4.text = "https://www.agrifarming.in/mango-farming-in-philippines-how-to-start-varieties-planting-care-and-harvesting"
 
         // Enable auto-linking of URLs
         Linkify.addLinks(linkSite1, Linkify.WEB_URLS)
@@ -42,10 +42,10 @@ class MoreInfoFragment : Fragment() {
         Linkify.addLinks(linkSite4, Linkify.WEB_URLS)
 
         // Handle link clicks (optional)
-        linkSite1.setOnClickListener { openUrl("https://www.agrifarming.in/mango-pests-diseases-and-control-methods-a-full-guide") }
-        linkSite2.setOnClickListener { openUrl("https://www.example2.com") }
-        linkSite3.setOnClickListener { openUrl("https://www.example3.com") }
-        linkSite4.setOnClickListener { openUrl("https://www.example4.com") }
+        linkSite1.setOnClickListener { openUrl("http://www.pcaf.da.gov.ph/wp-content/uploads/2022/06/Philippine-Mango-Industry-Roadmap-2021-2025.pdf") }
+        linkSite2.setOnClickListener { openUrl("https://www.agrifarming.in/mango-pests-diseases-and-control-methods-a-full-guide") }
+        linkSite3.setOnClickListener { openUrl("https://scholars.direct/Articles/plant-pathology/jppr-4-012.php?jid=plant-pathology") }
+        linkSite4.setOnClickListener { openUrl("https://www.agrifarming.in/mango-farming-in-philippines-how-to-start-varieties-planting-care-and-harvesting") }
 
         return rootView
     }

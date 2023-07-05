@@ -34,10 +34,37 @@
     <string name="textName">Faith Mary T. Galon</string>
     <string name="textElective">System Administration</string>
     <string name="textEmail">qfmtgalon@tip.edu.ph</string>
-    <string name="textAns1">- The Happy Tree app is a mobile application designed to assist mango tree farmers in monitoring mango trees.</string>
+    <string name="textAns1">- The Happy Tree app is a mobile application designed to assist mango tree farmers in monitoring diseases on their mango trees.</string>
     <string name="txtQ1">What is the Happy Tree App?</string>
     <string name="txtQ2">What kind of information about mango tree diseases can I find in the Happy Tree app?</string>
     <string name="textAns2">- The Happy Tree app provides valuable information about mango tree diseases, helping users understand and address common issues affecting mango trees.</string>
+    <string name="anthracnose">Anthracnose</string>
+
+
+    <string name="textLink1">Mango Pests and Diseases</string>
+    <string name="textLink2">Mango Pests, Diseases, and Control Methods - A Full Guide</string>
+    <string name="textLink3">Insights on the Mango Anthracnose and its Management</string>
+    <string name="textLink4">Mango Farming in Philippines: How to Start, Varieties, Planting, Care, and Harvesting</string>
+    <string name="txtMoreInfoTittle">Additional Information</string>
+
+
+
+    <string name="anthracnose_name">Anthracnose</string>
+    <string name="anthracnose_description">Antracnose is a fungal disease that affects a wide range of plants, including mango trees. It is caused by several species of fungi in the Colletotrichum genus, which can infect the leaves, stems, flowers, and fruit of the tree. Symptoms of antracnose on mango trees include small, dark-colored spots on the leaves, stems, and fruit.</string>
+    <string name="anthracnose_lethality"> LETHALITY: Not lethal, moderate</string>
+    <string name="anthracnose_humidity">HUMIDITY: Warm and moist weather</string>
+    <string name="sooty_mold_description">Dark Brown, Black mostly seen in Warm and Dry period and  grows on honeydew excreted by piercing sucking insects.</string>
+    <string name="sooty_mold_name">Sooty Mold</string>
+    <string name="sooty_mold_lethality">LETHALITY: Not lethal, Mild, Moderate</string>
+    <string name="sooty_mold_humidity">HUMIDITY: Warm or Dry Weather</string>
+    <string name="red_rust_name">Red Rust</string>
+    <string name="red_rust_description">Red rust is a fungal disease that damages mango plants. Puccinia mangiferae affects the tree\'s leaves. Reddish-brown or orange pustules on the leaves may cause distortion and premature leaf drop. This reduces tree growth and fruit yield.</string>
+    <string name="red_rust_lethality">LETHALITY: Not lethal, Mild, Moderate</string>
+    <string name="red_rust_humidity">HUMIDITY: Wet and warm weather</string>
+    <string name="powdery_mildew_name">Powdery Mildew</string>
+    <string name="powdery_mildew_description">Powdery mildew is a fungal disease that affects mango trees. It appears as a white or grayish powdery growth on leaves, shoots, flowers, and fruits. Severe infections can weaken the tree and reduce productivity.</string>
+    <string name="powdery_mildew_lethality">LETHALITY: Not lethal, Moderate</string>
+    <string name="powdery_mildew_humidity">HUMIDITY: Moderate to high humidity, favorable conditions include warm weather</string>
 
 
 </resources>

@@ -1,56 +1,230 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
+    android:layout_width="380dp"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_gravity="center"
     tools:context=".TreeDiseases">
+
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat"
+        android:gravity="center"
+        android:padding="8dp"
+        android:text="Common Mango Tree Diseases in the Philippines"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <LinearLayout
+            android:id="@+id/diseasesContainer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
+            <!-- CardView for Anthracnose -->
             <androidx.cardview.widget.CardView
-                android:id="@+id/cardAnthracnose"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="16dp"
-                app:cardUseCompatPadding="true">
+                style="@style/DiseasesCardview"
+                android:layout_margin="8dp">
 
-                <!-- Add your layout for Anthracnose option here -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:id="@+id/diseaseName1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Anthracnose"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/diseaseDescription1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="Description of Anthracnose"
+                        android:textColor="#3B444B" />
+
+                    <TextView
+                        android:id="@+id/diseaseLethality1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="Lethality: High"
+                        android:textColor="#3B444B" />
+
+                    <TextView
+                        android:id="@+id/diseaseHumidity1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="Humidity: High"
+                        android:textColor="#3B444B" />
+
+                </LinearLayout>
 
             </androidx.cardview.widget.CardView>
 
+            <!-- CardView for Sooty Mold -->
             <androidx.cardview.widget.CardView
-                android:id="@+id/cardSootyMold"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="16dp"
-                app:cardUseCompatPadding="true">
+                style="@style/DiseasesCardview"
+                android:layout_margin="8dp">
 
-                <!-- Add your layout for Sooty Mold option here -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:id="@+id/diseaseName2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Sooty Mold"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/diseaseDescription2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="Description of Sooty Mold"
+                        android:textColor="#3B444B" />
+
+                    <TextView
+                        android:id="@+id/diseaseLethality2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="Lethality: Low"
+                        android:textColor="#3B444B" />
+
+                    <TextView
+                        android:id="@+id/diseaseHumidity2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="Humidity: Medium"
+                        android:textColor="#3B444B" />
+
+                </LinearLayout>
 
             </androidx.cardview.widget.CardView>
 
+            <!-- CardView for Red Rust -->
             <androidx.cardview.widget.CardView
-                android:id="@+id/cardRedRust"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="16dp"
-                app:cardUseCompatPadding="true">
+                style="@style/DiseasesCardview"
+                android:layout_margin="8dp">
 
-                <!-- Add your layout for Red Rust option here -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:id="@+id/diseaseName3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Red Rust"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/diseaseDescription3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="Description of Red Rust"
+                        android:textColor="#3B444B" />
+
+                    <TextView
+                        android:id="@+id/diseaseLethality3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="Lethality: Medium"
+                        android:textColor="#3B444B" />
+
+                    <TextView
+                        android:id="@+id/diseaseHumidity3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="Humidity: High"
+                        android:textColor="#3B444B" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <!-- CardView for Powdery Mildew -->
+            <androidx.cardview.widget.CardView
+                style="@style/DiseasesCardview"
+                android:layout_margin="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:id="@+id/diseaseName4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Powdery Mildew"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/diseaseDescription4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="Description of Powdery Mildew"
+                        android:textColor="#3B444B" />
+
+                    <TextView
+                        android:id="@+id/diseaseLethality4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="Lethality: Medium"
+                        android:textColor="#3B444B" />
+
+                    <TextView
+                        android:id="@+id/diseaseHumidity4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="Humidity: Low"
+                        android:textColor="#3B444B" />
+
+                </LinearLayout>
 
             </androidx.cardview.widget.CardView>
 
         </LinearLayout>
-
     </ScrollView>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
