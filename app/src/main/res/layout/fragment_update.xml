@@ -11,80 +11,27 @@
         android:id="@+id/txtUpdateTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="32dp"
         android:fontFamily="@font/montserrat"
         android:text="UPDATE DETAILS"
         android:textColor="#000000"
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/upDiseaseContainer"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="20dp"
-        android:layout_marginTop="60dp"
-        app:endIconMode="clear_text"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.504"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtUpdateTitle">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/upDisease"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:hint="Disease"
-            android:inputType="textPersonName"
-            android:minHeight="48dp"
-            android:textColor="#000000" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/upNumtreeContainer"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="20dp"
-        android:layout_marginTop="28dp"
-        app:endIconMode="clear_text"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.504"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/upVariantContainer">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/upNumtree"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:hint="Number of Trees"
-            android:inputType="textPersonName"
-            android:minHeight="48dp"
-            android:textColor="#020202" />
-    </com.google.android.material.textfield.TextInputLayout>
 
     <Button
         android:id="@+id/btnUp"
         style="@style/button2"
         android:layout_marginStart="39dp"
-        android:layout_marginTop="52dp"
+        android:layout_marginTop="56dp"
         android:layout_marginEnd="40dp"
         android:text="UPDATE"
         app:layout_constraintEnd_toStartOf="@+id/btnDel"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/UpdateContainer" />
-
-    <Button
-        android:id="@+id/btnDel"
-        style="@style/button2"
-        android:layout_marginTop="52dp"
-        android:layout_marginEnd="39dp"
-        android:text="DELETE"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/UpdateContainer" />
 
     <com.google.android.material.textfield.TextInputLayout
@@ -93,10 +40,10 @@
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="20dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="20dp"
         app:endIconMode="clear_text"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/upNumtreeContainer">
 
@@ -111,15 +58,47 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/upNumtreeContainer"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="36dp"
+        app:endIconMode="clear_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/upVariantContainer">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/upNumtree"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Number of Trees"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            android:textColor="#020202" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btnDel"
+        style="@style/button2"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="40dp"
+        android:text="DELETE"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/UpdateContainer" />
+
+    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/upVariantContainer"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="20dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="32dp"
         app:endIconMode="clear_text"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/upDiseaseContainer">
 
@@ -128,6 +107,29 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:hint="Variant"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            android:textColor="#000000" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/upDiseaseContainer"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="56dp"
+        app:endIconMode="clear_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtUpdateTitle">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/upDisease"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Disease"
             android:inputType="textPersonName"
             android:minHeight="48dp"
             android:textColor="#000000" />

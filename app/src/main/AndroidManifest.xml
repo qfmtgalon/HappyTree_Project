@@ -10,6 +10,7 @@
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@drawable/hplogo"
         android:label="@string/app_name"
+        android:textColor="@color/colorPrimaryVariant"
         android:roundIcon="@drawable/hplogo"
         android:supportsRtl="true"
         android:theme="@style/Theme.HappyTree"
@@ -19,7 +20,8 @@
             android:name=".MainActivity"
             android:exported="false"
             android:label="LandingPage"
-            android:theme="@style/Theme.HappyTree.NoActionBar">
+            android:theme="@style/Theme.MaterialComponents.DayNight.DarkActionBar"
+            >
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />

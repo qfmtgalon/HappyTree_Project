@@ -6,7 +6,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.http.GET
 
 
-private val retrofit = Retrofit.Builder().baseUrl("https://fastapi-production-0f7f.up.railway.app/").addConverterFactory(GsonConverterFactory.create()).build()
+private val retrofit = Retrofit.Builder().baseUrl("https://mangotreediseases-production.up.railway.app/").addConverterFactory(GsonConverterFactory.create()).build()
 
 interface DiseaseService {
     @GET("anthracnose/")
@@ -19,6 +19,10 @@ interface DiseaseService {
 
     @GET("sootymold/")
     fun getSootyData():
+            Call<DiseaseResponse>
+
+    @GET("powderymildew/")
+    fun getPowderyMildewData():
             Call<DiseaseResponse>
 }
 

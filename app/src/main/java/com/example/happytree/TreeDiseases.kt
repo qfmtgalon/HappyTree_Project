@@ -1,17 +1,30 @@
 package com.example.happytree
 
-
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import android.widget.Toast
+import androidx.cardview.widget.CardView
 import androidx.fragment.app.Fragment
-
+import com.example.happytree.API.DiseaseResponse
+import com.example.happytree.API.diseaseSignal
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 
 class TreeDiseases : Fragment() {
 
     private lateinit var rootView: View
+
+    // Cards
+    private lateinit var cardAnthracnose: CardView
+    private lateinit var cardSootyMold: CardView
+    private lateinit var cardRedRust: CardView
+    private lateinit var cardPowderyMildew: CardView
+
+    // TextViews
     private lateinit var diseaseName1: TextView
     private lateinit var diseaseDescription1: TextView
     private lateinit var diseaseLethality1: TextView
@@ -33,76 +46,88 @@ class TreeDiseases : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         rootView = inflater.inflate(R.layout.fragment_tree_diseases, container, false)
         initializeViews(rootView)
-        setupDiseases()
+        loadAllDiseases()
         return rootView
     }
 
     private fun initializeViews(view: View) {
+        cardAnthracnose = view.findViewById(R.id.cardAnthracnose)
+        cardSootyMold = view.findViewById(R.id.cardSootyMold)
+        cardRedRust = view.findViewById(R.id.cardRedRust)
+        cardPowderyMildew = view.findViewById(R.id.cardPowderyMildew)
+
         diseaseName1 = view.findViewById(R.id.diseaseName1)
         diseaseDescription1 = view.findViewById(R.id.diseaseDescription1)
         diseaseLethality1 = view.findViewById(R.id.diseaseLethality1)
         diseaseHumidity1 = view.findViewById(R.id.diseaseHumidity1)
+
         diseaseName2 = view.findViewById(R.id.diseaseName2)
         diseaseDescription2 = view.findViewById(R.id.diseaseDescription2)
         diseaseLethality2 = view.findViewById(R.id.diseaseLethality2)
         diseaseHumidity2 = view.findViewById(R.id.diseaseHumidity2)
+
         diseaseName3 = view.findViewById(R.id.diseaseName3)
         diseaseDescription3 = view.findViewById(R.id.diseaseDescription3)
         diseaseLethality3 = view.findViewById(R.id.diseaseLethality3)
         diseaseHumidity3 = view.findViewById(R.id.diseaseHumidity3)
+
         diseaseName4 = view.findViewById(R.id.diseaseName4)
         diseaseDescription4 = view.findViewById(R.id.diseaseDescription4)
         diseaseLethality4 = view.findViewById(R.id.diseaseLethality4)
         diseaseHumidity4 = view.findViewById(R.id.diseaseHumidity4)
     }
 
-    private fun setupDiseases() {
-        // Retrieve the texts from string resources
-        val anthracnoseName = resources.getString(R.string.anthracnose_name)
-        val anthracnoseDescription = resources.getString(R.string.anthracnose_description)
-        val anthracnoseLethality = resources.getString(R.string.anthracnose_lethality)
-        val anthracnoseHumidity = resources.getString(R.string.anthracnose_humidity)
+    private fun loadAllDiseases() {
+        val service = diseaseSignal.retrofitService
 
-        val sootyMoldName = resources.getString(R.string.sooty_mold_name)
-        val sootyMoldDescription = resources.getString(R.string.sooty_mold_description)
-        val sootyMoldLethality = resources.getString(R.string.sooty_mold_lethality)
-        val sootyMoldHumidity = resources.getString(R.string.sooty_mold_humidity)
+        fun loadDisease(
+            call: Call<DiseaseResponse>,
+            displayName: String,
+            nameView: TextView,
+            descView: TextView,
+            lethView: TextView,
+            humView: TextView
+        ) {
+            // Show loading placeholder
+            nameView.text = displayName
+            descView.text = "Loading..."
+            lethView.text = "-"
+            humView.text = "-"
 
-        val redRustName = resources.getString(R.string.red_rust_name)
-        val redRustDescription = resources.getString(R.string.red_rust_description)
-        val redRustLethality = resources.getString(R.string.red_rust_lethality)
-        val redRustHumidity = resources.getString(R.string.red_rust_humidity)
+            call.enqueue(object : Callback<DiseaseResponse> {
+                override fun onResponse(
+                    call: Call<DiseaseResponse>,
+                    response: Response<DiseaseResponse>
+                ) {
+                    if (response.isSuccessful) {
+                        val body = response.body()
+                        if (body != null) {
+                            descView.text = body.description ?: "No description available"
+                            lethView.text = body.lethality ?: "-"
+                            humView.text = body.humidity ?: "-"
+                        } else {
+                            descView.text = "No data available"
+                        }
+                    } else {
+                        descView.text = "Failed to load data"
+                    }
+                }
 
-        val powderyMildewName = resources.getString(R.string.powdery_mildew_name)
-        val powderyMildewDescription = resources.getString(R.string.powdery_mildew_description)
-        val powderyMildewLethality = resources.getString(R.string.powdery_mildew_lethality)
-        val powderyMildewHumidity = resources.getString(R.string.powdery_mildew_humidity)
-
-        rootView.apply {
-            // Set the text for each disease using the retrieved strings
-            diseaseName1.text = anthracnoseName
-            diseaseDescription1.text = anthracnoseDescription
-            diseaseLethality1.text = anthracnoseLethality
-            diseaseHumidity1.text = anthracnoseHumidity
-
-            diseaseName2.text = sootyMoldName
-            diseaseDescription2.text = sootyMoldDescription
-            diseaseLethality2.text = sootyMoldLethality
-            diseaseHumidity2.text = sootyMoldHumidity
-
-            diseaseName3.text = redRustName
-            diseaseDescription3.text = redRustDescription
-            diseaseLethality3.text = redRustLethality
-            diseaseHumidity3.text = redRustHumidity
-
-            diseaseName4.text = powderyMildewName
-            diseaseDescription4.text = powderyMildewDescription
-            diseaseLethality4.text = powderyMildewLethality
-            diseaseHumidity4.text = powderyMildewHumidity
+                override fun onFailure(call: Call<DiseaseResponse>, t: Throwable) {
+                    t.printStackTrace()
+                    descView.text = "Error fetching data"
+                    Toast.makeText(requireContext(), "Failed to load $displayName", Toast.LENGTH_SHORT).show()
+                }
+            })
         }
-    }
 
+        // Load all diseases from API
+        loadDisease(service.getAnthracnoseData(), "Anthracnose", diseaseName1, diseaseDescription1, diseaseLethality1, diseaseHumidity1)
+        loadDisease(service.getSootyData(), "Sooty Mold", diseaseName2, diseaseDescription2, diseaseLethality2, diseaseHumidity2)
+        loadDisease(service.getRedData(), "Red Rust", diseaseName3, diseaseDescription3, diseaseLethality3, diseaseHumidity3)
+        loadDisease(service.getPowderyMildewData(), "Powdery Mildew", diseaseName4, diseaseDescription4, diseaseLethality4, diseaseHumidity4)
+    }
 }

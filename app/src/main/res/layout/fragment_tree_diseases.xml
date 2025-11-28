@@ -3,28 +3,29 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="380dp"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:layout_gravity="center"
+    android:background="#b1ce89"
     tools:context=".TreeDiseases">
 
+    <!-- Header -->
     <TextView
         android:id="@+id/titleTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/montserrat"
+        android:fontFamily="@font/lato_black"
         android:gravity="center"
-        android:padding="8dp"
-        android:text="Common Mango Tree Diseases in the Philippines"
-        android:textColor="@color/black"
-        android:textSize="20sp"
+        android:padding="16dp"
+        android:text="Common Mango Tree Diseases\nin the Philippines"
+        android:textColor="@color/colorPrimary"
+        android:textSize="22sp"
         android:textStyle="bold" />
-
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:padding="12dp">
 
         <LinearLayout
             android:id="@+id/diseasesContainer"
@@ -34,47 +35,122 @@
 
             <!-- CardView for Anthracnose -->
             <androidx.cardview.widget.CardView
-                style="@style/DiseasesCardview"
-                android:layout_margin="8dp">
+                android:id="@+id/cardAnthracnose"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                app:cardBackgroundColor="@color/colorPrimary">
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:padding="8dp">
+                    android:padding="16dp">
 
-                    <TextView
-                        android:id="@+id/diseaseName1"
-                        android:layout_width="wrap_content"
+                    <!-- Header with colored indicator -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Anthracnose"
-                        android:textColor="@color/black"
-                        android:textSize="20sp"
-                        android:textStyle="bold" />
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:paddingBottom="8dp">
+
+                        <View
+                            android:layout_width="4dp"
+                            android:layout_height="28dp"
+                            android:background="#ffffff"
+                            android:layout_marginEnd="12dp" />
+
+                        <TextView
+                            android:id="@+id/diseaseName1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/lato_black"
+                            android:text="Anthracnose"
+                            android:textColor="@color/colorPrimaryVariant"
+                            android:textSize="22sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
 
                     <TextView
                         android:id="@+id/diseaseDescription1"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
+                        android:layout_marginTop="8dp"
+                        android:lineSpacingExtra="2dp"
                         android:text="Description of Anthracnose"
-                        android:textColor="#3B444B" />
+                        android:textColor="#FFFFFF"
+                        android:textSize="16sp" />
 
-                    <TextView
-                        android:id="@+id/diseaseLethality1"
-                        android:layout_width="wrap_content"
+                    <!-- Info section -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
-                        android:text="Lethality: High"
-                        android:textColor="#3B444B" />
+                        android:orientation="horizontal"
+                        android:layout_marginTop="12dp"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="8dp">
 
-                    <TextView
-                        android:id="@+id/diseaseHumidity1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
-                        android:text="Humidity: High"
-                        android:textColor="#3B444B" />
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="LETHALITY"
+                                android:textSize="10sp"
+                                android:textStyle="bold"
+                                android:textColor="#9E9E9E" />
+
+                            <TextView
+                                android:id="@+id/diseaseLethality1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:text="High"
+                                android:textColor="#ffffff"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="HUMIDITY"
+                                android:textSize="10sp"
+                                android:textStyle="bold"
+                                android:textColor="#9E9E9E" />
+
+                            <TextView
+                                android:id="@+id/diseaseHumidity1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:text="High"
+                                android:textColor="#ffffff"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <!-- Tap to view hint -->
 
                 </LinearLayout>
 
@@ -82,47 +158,118 @@
 
             <!-- CardView for Sooty Mold -->
             <androidx.cardview.widget.CardView
-                style="@style/DiseasesCardview"
-                android:layout_margin="8dp">
+                android:id="@+id/cardSootyMold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                app:cardBackgroundColor="@color/colorPrimary">
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="250dp"
+                    android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:padding="8dp">
+                    android:padding="16dp">
 
-                    <TextView
-                        android:id="@+id/diseaseName2"
-                        android:layout_width="wrap_content"
+                    <LinearLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Sooty Mold"
-                        android:textColor="@color/black"
-                        android:textSize="20sp"
-                        android:textStyle="bold" />
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:paddingBottom="8dp">
+
+                        <View
+                            android:layout_width="4dp"
+                            android:layout_height="28dp"
+                            android:background="#ffffff"
+                            android:layout_marginEnd="12dp" />
+
+                        <TextView
+                            android:id="@+id/diseaseName2"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/lato_black"
+                            android:text="Sooty Mold"
+                            android:textColor="@color/colorPrimaryVariant"
+                            android:textSize="22sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
 
                     <TextView
                         android:id="@+id/diseaseDescription2"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
+                        android:layout_marginTop="8dp"
+                        android:lineSpacingExtra="2dp"
                         android:text="Description of Sooty Mold"
-                        android:textColor="#3B444B" />
+                        android:textColor="#FFFFFF"
+                        android:textSize="16sp" />
 
-                    <TextView
-                        android:id="@+id/diseaseLethality2"
-                        android:layout_width="wrap_content"
+                    <LinearLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
-                        android:text="Lethality: Low"
-                        android:textColor="#3B444B" />
+                        android:orientation="horizontal"
+                        android:layout_marginTop="12dp"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="8dp">
 
-                    <TextView
-                        android:id="@+id/diseaseHumidity2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
-                        android:text="Humidity: Medium"
-                        android:textColor="#3B444B" />
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="LETHALITY"
+                                android:textSize="10sp"
+                                android:textStyle="bold"
+                                android:textColor="#9E9E9E" />
+
+                            <TextView
+                                android:id="@+id/diseaseLethality2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:text="Low"
+                                android:textColor="#ffffff"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="HUMIDITY"
+                                android:textSize="10sp"
+                                android:textStyle="bold"
+                                android:textColor="#9E9E9E" />
+
+                            <TextView
+                                android:id="@+id/diseaseHumidity2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:text="Medium"
+                                android:textColor="#ffffff"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                    </LinearLayout>
 
                 </LinearLayout>
 
@@ -130,47 +277,118 @@
 
             <!-- CardView for Red Rust -->
             <androidx.cardview.widget.CardView
-                style="@style/DiseasesCardview"
-                android:layout_margin="8dp">
+                android:id="@+id/cardRedRust"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                app:cardBackgroundColor="@color/colorPrimary">
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:padding="8dp">
+                    android:padding="16dp">
 
-                    <TextView
-                        android:id="@+id/diseaseName3"
-                        android:layout_width="wrap_content"
+                    <LinearLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Red Rust"
-                        android:textColor="@color/black"
-                        android:textSize="20sp"
-                        android:textStyle="bold" />
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:paddingBottom="8dp">
+
+                        <View
+                            android:layout_width="4dp"
+                            android:layout_height="28dp"
+                            android:background="#ffffff"
+                            android:layout_marginEnd="12dp" />
+
+                        <TextView
+                            android:id="@+id/diseaseName3"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/lato_black"
+                            android:text="Red Rust"
+                            android:textColor="@color/colorPrimaryVariant"
+                            android:textSize="22sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
 
                     <TextView
                         android:id="@+id/diseaseDescription3"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
+                        android:layout_marginTop="8dp"
                         android:text="Description of Red Rust"
-                        android:textColor="#3B444B" />
+                        android:textColor="#FFFFFF"
+                        android:textSize="14sp"
+                        android:lineSpacingExtra="2dp" />
 
-                    <TextView
-                        android:id="@+id/diseaseLethality3"
-                        android:layout_width="wrap_content"
+                    <LinearLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
-                        android:text="Lethality: Medium"
-                        android:textColor="#3B444B" />
+                        android:orientation="horizontal"
+                        android:layout_marginTop="12dp"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="8dp">
 
-                    <TextView
-                        android:id="@+id/diseaseHumidity3"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
-                        android:text="Humidity: High"
-                        android:textColor="#3B444B" />
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="LETHALITY"
+                                android:textSize="10sp"
+                                android:textStyle="bold"
+                                android:textColor="#9E9E9E" />
+
+                            <TextView
+                                android:id="@+id/diseaseLethality3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:text="Medium"
+                                android:textColor="#ffffff"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="HUMIDITY"
+                                android:textSize="10sp"
+                                android:textStyle="bold"
+                                android:textColor="#9E9E9E" />
+
+                            <TextView
+                                android:id="@+id/diseaseHumidity3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:text="High"
+                                android:textColor="#ffffff"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                    </LinearLayout>
 
                 </LinearLayout>
 
@@ -178,47 +396,115 @@
 
             <!-- CardView for Powdery Mildew -->
             <androidx.cardview.widget.CardView
-                style="@style/DiseasesCardview"
-                android:layout_margin="8dp">
+                android:id="@+id/cardPowderyMildew"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp"
+                app:cardBackgroundColor="@color/colorPrimary">
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="250dp"
+                    android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:padding="8dp">
+                    android:padding="16dp">
 
-                    <TextView
-                        android:id="@+id/diseaseName4"
-                        android:layout_width="wrap_content"
+                    <LinearLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Powdery Mildew"
-                        android:textColor="@color/black"
-                        android:textSize="20sp"
-                        android:textStyle="bold" />
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:paddingBottom="8dp">
+
+                        <View
+                            android:layout_width="4dp"
+                            android:layout_height="28dp"
+                            android:background="#ffffff"
+                            android:layout_marginEnd="12dp" />
+
+                        <TextView
+                            android:id="@+id/diseaseName4"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/lato_black"
+                            android:text="Powdery Mildew"
+                            android:textColor="@color/colorPrimaryVariant"
+                            android:textSize="22sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
 
                     <TextView
                         android:id="@+id/diseaseDescription4"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
+                        android:layout_marginTop="8dp"
                         android:text="Description of Powdery Mildew"
-                        android:textColor="#3B444B" />
+                        android:textColor="#ffffff"
+                        android:textSize="14sp"
+                        android:lineSpacingExtra="2dp" />
 
-                    <TextView
-                        android:id="@+id/diseaseLethality4"
-                        android:layout_width="wrap_content"
+                    <LinearLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
-                        android:text="Lethality: Medium"
-                        android:textColor="#3B444B" />
+                        android:orientation="horizontal"
+                        android:layout_marginTop="12dp"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="8dp">
 
-                    <TextView
-                        android:id="@+id/diseaseHumidity4"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
-                        android:text="Humidity: Low"
-                        android:textColor="#3B444B" />
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="LETHALITY"
+                                android:textSize="10sp"
+                                android:textStyle="bold"
+                                android:textColor="#9E9E9E" />
+
+                            <TextView
+                                android:id="@+id/diseaseLethality4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:text="Medium"
+                                android:textColor="#ffffff"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="HUMIDITY"
+                                android:textSize="10sp"
+                                android:textStyle="bold"
+                                android:textColor="#9E9E9E" />
+
+                            <TextView
+                                android:id="@+id/diseaseHumidity4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:text="Low"
+                                android:textColor="#ffffff"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                    </LinearLayout>
 
                 </LinearLayout>
 

@@ -12,7 +12,7 @@
         android:id="@+id/txtAddTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="32dp"
         android:fontFamily="@font/montserrat"
         android:text="ADD ITEM"
         android:textColor="#000000"
@@ -40,7 +40,8 @@
             android:layout_height="match_parent"
             android:hint="@string/disease"
             android:inputType="textPersonName"
-            android:lines="1" />
+            android:lines="1"
+            android:textColor="#000000" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -84,7 +85,8 @@
             android:layout_height="match_parent"
             android:hint="@string/numTree"
             android:inputType="numberDecimal"
-            android:lines="1" />
+            android:lines="1"
+            android:textColor="#000000" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -105,7 +107,8 @@
             android:layout_height="match_parent"
             android:hint="@string/dateTime"
             android:inputType="datetime"
-            android:lines="1" />
+            android:lines="1"
+            android:textColor="#000000" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button

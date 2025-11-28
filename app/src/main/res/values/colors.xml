@@ -14,13 +14,13 @@
 
 
 
-    <color name="colorPrimary">#356B50</color> <!-- color sa app bar-->
+    <color name="colorPrimary">#043915</color> <!-- color sa app bar-->
     <color name="colorPrimaryVariant">#C9DBAB</color>
     <color name="colorOnPrimary">#FFFFFF</color>
 
     <!-- Secondary brand color. -->
     <color name="colorSecondary">#366B51</color>  <!-- bottm nav at nav drawer-->
-    <color name="colorSecondaryVariant">#6F9667</color>#254D32
+    <color name="colorSecondaryVariant">#043915</color>#254D32
     <color name="colorOnSecondary">#CEDBD4</color>
 
     <color name="colorPrimaryContainer">#236F53</color> #

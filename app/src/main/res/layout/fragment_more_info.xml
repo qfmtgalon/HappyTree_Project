@@ -40,7 +40,8 @@
         android:autoLink="web"
         android:minHeight="48dp"
         android:textColor="#0000FF"
-        android:textColorLink="@color/colorError"
+        android:textColorLink="@color/black"
+        android:textStyle="italic"
         tools:text="https://www.da.gov.ph/wp-content/uploads/2019/06/Philippine-Mango-Industry-Roadmap-2017-2022.pdf" />
 
 
@@ -62,8 +63,9 @@
         android:layout_height="wrap_content"
         android:autoLink="web"
         android:minHeight="48dp"
-        android:textColor="#0000FF"
-        android:textColorLink="@color/colorError"
+        android:textColor="@color/black"
+        android:textColorLink="@color/black"
+        android:textStyle="italic"
         tools:text="https://www.agrifarming.in/mango-pests-diseases-and-control-methods-a-full-guide" />
 
 
@@ -85,7 +87,8 @@
         android:autoLink="web"
         android:minHeight="48dp"
         android:textColor="#0000FF"
-        android:textColorLink="@color/colorError"
+        android:textColorLink="@color/black"
+        android:textStyle="italic"
         tools:text="https://scholars.direct/Articles/plant-pathology/jppr-4-012.php?jid=plant-pathology" />
 
 
@@ -106,7 +109,8 @@
         android:autoLink="web"
         android:minHeight="48dp"
         android:textColor="#0000FF"
-        android:textColorLink="@color/colorError"
+        android:textColorLink="@color/black"
+        android:textStyle="italic"
         tools:text="https://www.agrifarming.in/mango-farming-in-philippines-how-to-start-varieties-planting-care-and-harvesting" />
 
 </LinearLayout>

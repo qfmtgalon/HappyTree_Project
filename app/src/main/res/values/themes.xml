@@ -11,6 +11,9 @@
         <item name="colorSecondaryVariant">@color/colorSecondaryVariant</item>
         <item name="colorOnSecondary">@color/colorOnSecondary</item>
 
+        <item name="android:textColorPrimary">@color/colorPrimaryVariant</item>
+        <item name="titleTextColor">@color/colorPrimaryVariant</item>
+
         <!-- Status bar color. -->
         <item name="android:statusBarColor">@color/black</item>
 
